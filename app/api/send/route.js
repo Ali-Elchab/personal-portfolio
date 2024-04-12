@@ -1,23 +1,33 @@
 // import { EmailTemplate } from "../../../components/EmailTemplate";
 import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-export async function POST() {
+export async function sendMail(subject, body) {
+  const SMTP_EMAIL = process.env.SMTP_EMAIL;
+  const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: SMTP_EMAIL,
+      pass: SMTP_PASSWORD,
+    },
+  });
   try {
-    const data = await resend.emails.send({
-      from: "Aseel <aseelmesslmani1@gmail.com>",
-      to: ["alielchab01@gmail.com"],
-      subject: "Hello world",
-      react: (
-        <>
-          <p>Email Body</p>
-        </>
-      ),
-    });
-
-    return Response.json(data);
+    const testResult = await transporter.verify();
+    console.log("testResult", testResult);
   } catch (error) {
-    return Response.json({ error });
+    console.log(error);
+  }
+
+  try {
+    const sendResult = await transporter.sendMail({
+      from: SMTP_EMAIL,
+      to: SMTP_EMAIL,
+      subject: subject,
+      html: body,
+    });
+    console.log("sendResult", sendResult);
+  } catch (error) {
+    console.log(error);
   }
 }
