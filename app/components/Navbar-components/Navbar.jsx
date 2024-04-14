@@ -8,7 +8,7 @@ import { XmarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
 const navLinks = [
   { href: "#about", title: "About" },
   { href: "#projects", title: "Projects" },
-  { href: "#contact", title: "Contact" },
+  { href: "Contact", title: "Contact" },
 ];
 
 const Navbar = () => {
