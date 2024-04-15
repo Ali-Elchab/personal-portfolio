@@ -88,7 +88,7 @@ const TAB_DATA = [
     title: "Certifications",
     content: (
       <ul className="list-disc pl-2 ml-2">
-        <li className="mb-4">
+        <li className="mb-4 text-justify">
           <strong>Full-Stack Web Development Bootcamp – SE Factory, Lebanon (October 2023 – January 2024)</strong>
           <ul className="list-disc pl-2 ml-8">
             <li>
@@ -98,9 +98,9 @@ const TAB_DATA = [
             <li>Engaged in lectures, workshops, and projects to develop comprehensive full-stack development skills.</li>
           </ul>
         </li>
-        <li className="mb-4">
+        <li className="mb-4 text-justify">
           <strong>Foundations of Computer Science Course – SE Factory, Lebanon (July 2023 – September 2023)</strong>
-          <ul className="list-disc pl-2 ml-8">
+          <ul className="list-disc pl-2 ml-8 text-justify">
             <li>
               Covered control flow, data structures, complexity analysis, and algorithms using Python over 9 weeks in a part-time
               format.
@@ -110,13 +110,13 @@ const TAB_DATA = [
         </li>
         <li className="mb-4">
           <strong>The Web Developer Bootcamp – Udemy (July 2023 – September 2023)</strong>
-          <ul className="list-disc pl-2 ml-8">
+          <ul className="list-disc pl-2 ml-8 ">
             <li>Completed over 70 hours of training from HTML5 to Node.js, React.js, and more, through online learning.</li>
           </ul>
         </li>
         <li className="mb-4">
           <strong>Flutter And Dart - The Complete Guide – Udemy (January 2024)</strong>
-          <ul className="list-disc pl-2 ml-8">
+          <ul className="list-disc pl-2 ml-8 text-justify">
             <li>Explored the Flutter SDK & Dart; learned to build native iOS and Android apps through the Flutter Framework.</li>
           </ul>
         </li>
@@ -138,13 +138,19 @@ const AboutSection = () => {
     <section className="text-white">
       <div className="md:grid md:grid-cols-5  gap-8 items-center py-8  xl:gap-16 sm:py-16 my-8">
         <div class="hidden md:block place-self-start md:col-span-2">
-          <div class="w-full   flex items-center justify-end ">
-            <Image src="/images/about-image.png" className="w-full  object-fill" width={400} height={500} alt="PC Setup" />
+          <div class="w-full   flex items-center justify-end">
+            <Image
+              src="/images/about-image.png"
+              className="w-full  object-fill rounded-xl"
+              width={400}
+              height={500}
+              alt="PC Setup"
+            />
           </div>
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full md:col-span-3">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
+          <p className="text-base lg:text-lg text-justify">
             I'm a passionate software developer with three years of IT experience, skilled in creating intuitive web and mobile
             applications. My technical background has empowered me to excel in the dynamic field of software development. I'm
             eager to expand my knowledge, especially in the evolving world of AI. For me, coding is a pathway to innovate and

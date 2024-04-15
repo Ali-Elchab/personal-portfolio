@@ -20,8 +20,8 @@ const Navbar = ({ aboutRef, projectRef, emailRef }) => {
 
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
-      <div className="flex flex-wrap items-center justify-between mx-auto max-w-screen-xl p-8 lg:px-10 xl:px-0">
+    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 border-b border-gray-600">
+      <div className="flex flex-wrap items-center justify-between  p-6 lg:px-10 xl:px-16">
         <div class="w-40 h-16 flex items-center justify-start">
           <Image src={Logo} alt="Logo" className="w-full h-full object-cover" />
         </div>
@@ -57,7 +57,7 @@ const Navbar = ({ aboutRef, projectRef, emailRef }) => {
               <li key={index}>
                 <button
                   onClick={() => scrollToRef(link.ref)}
-                  className="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white"
+                  className="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-2xl rounded md:p-0 hover:text-white"
                 >
                   {link.title}
                 </button>
