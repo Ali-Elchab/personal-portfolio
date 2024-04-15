@@ -1,24 +1,30 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import NavLink from "./NavLink";
+import { useRef } from "react";
 import MenuOverlay from "./MenuOverlay";
 import { XmarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
+import Image from "next/image";
+import Logo from "../../../public/E.svg";
 
-const navLinks = [
-  { href: "#about", title: "About" },
-  { href: "#projects", title: "Projects" },
-  { href: "Contact", title: "Contact" },
-];
+const Navbar = ({ aboutRef, projectRef, emailRef }) => {
+  const scrollToRef = (ref) => {
+    window.scrollTo(0, ref.current.offsetTop);
+  };
 
-const Navbar = () => {
+  const navLinks = [
+    { ref: aboutRef, title: "About" },
+    { ref: projectRef, title: "Projects" },
+    { ref: emailRef, title: "Contact" },
+  ];
+
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
-      <div className="flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href={"/"} className="text-2xl md:text-5xl text-white font-semibold">
-          Home
-        </Link>
+      <div className="flex flex-wrap items-center justify-between mx-auto max-w-screen-xl p-8 lg:px-10 xl:px-0">
+        <div class="w-48 h-16">
+          <Image src={Logo} alt="Logo" className="w-full h-full object-cover" />
+        </div>
         <div className="mobile-menu block md:hidden">
           {navbarOpen ? (
             <button
@@ -49,7 +55,12 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.href} title={link.title} />
+                <button
+                  onClick={() => scrollToRef(link.ref)}
+                  className="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white"
+                >
+                  {link.title}
+                </button>
               </li>
             ))}
           </ul>
