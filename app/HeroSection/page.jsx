@@ -5,14 +5,14 @@ import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = ({ emailRef }) => {
   return (
-    <section>
-      <div className="grid grid-cols-1 sm:grid-cols-12 mt-5 mb-8 lg:mt-8">
+    <section className="h-160 mb-24 flex flex-col justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-12 mt-5 mb-8 lg:mt-8 ">
         <div class="md:order-last order-none my-4 md:mb-0 sm:col-span-5 md:justify-end flex items-center justify-center  lg:mt-0">
-          <div class="w-80 h-92 flex items-center justify-end">
+          <div class="w-52 md:w-96 h-92 flex items-center justify-end">
             <Image src="/images/alichab.png" className="w-full h-full object-cover" alt="Ali Chab" width={300} height={300} />
           </div>
         </div>
-        <div className="col-span-7 place-self-left text-center sm:text-left ">
+        <div className="col-span-7 place-self-end text-center sm:text-left grid gap-y-8 ">
           <h1 className="text-white mb-4 text-4xl lg:text-6xl font-extrabold sm:text-5xl  ">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">Hello, I'm Ali Hadi </span>
             <br />
@@ -23,12 +23,10 @@ const HeroSection = ({ emailRef }) => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6 ">
-            I'm a passionate software developer with three years of IT experience, skilled in creating intuitive web and mobile
-            applications. My technical background has empowered me to excel in the dynamic field of software development. I'm
-            eager to expand my knowledge, especially in the evolving world of AI. For me, coding is a pathway to innovate and
-            connect the world.{" "}
+          <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6 w-3/4 md:w-full mx-auto">
+            I craft intuitive websites and apps by leveraging precise programming skills and a strong IT foundation.
           </p>
+
           <div>
             <button
               onClick={() => window.scrollTo({ top: emailRef.current.offsetTop, behavior: "smooth" })}
