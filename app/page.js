@@ -15,8 +15,8 @@ const Home = () => {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar aboutRef={aboutRef} projectRef={projectRef} emailRef={emailRef} />
-      <div className="container mx-auto max-w-screen-xl mt-24 p-8 lg:px-10 xl:px-0">
-        <HeroSection />
+      <div className="container mx-auto max-w-screen-xl mt-10 lg:mt-24 p-10 xl:px-16">
+        <HeroSection emailRef={emailRef} />
         <div ref={aboutRef}>
           <AboutSection />
         </div>

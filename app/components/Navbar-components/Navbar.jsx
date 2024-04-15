@@ -9,7 +9,7 @@ import Logo from "../../../public/E.svg";
 
 const Navbar = ({ aboutRef, projectRef, emailRef }) => {
   const scrollToRef = (ref) => {
-    window.scrollTo(0, ref.current.offsetTop);
+    window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
   };
 
   const navLinks = [
@@ -22,7 +22,7 @@ const Navbar = ({ aboutRef, projectRef, emailRef }) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
       <div className="flex flex-wrap items-center justify-between mx-auto max-w-screen-xl p-8 lg:px-10 xl:px-0">
-        <div class="w-48 h-16">
+        <div class="w-40 h-16 flex items-center justify-start">
           <Image src={Logo} alt="Logo" className="w-full h-full object-cover" />
         </div>
         <div className="mobile-menu block md:hidden">
