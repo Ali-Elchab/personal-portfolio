@@ -18,7 +18,7 @@ const Home = () => {
       <Navbar aboutRef={aboutRef} projectRef={projectRef} emailRef={emailRef} heroRef={heroRef} />
       <div className="container mx-auto max-w-screen-xl mt-24 p-10 xl:px-0 ">
         <div ref={heroRef}>
-          <HeroSection />
+          <HeroSection emailRef={emailRef} />
         </div>
         <div ref={aboutRef}>
           <AboutSection />
