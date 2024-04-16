@@ -137,8 +137,8 @@ const AboutSection = () => {
   return (
     <section className="text-white">
       <div className="md:grid md:grid-cols-5  gap-8 items-center py-8  xl:gap-16 sm:py-16 my-8">
-        <div class="hidden md:block place-self-start md:col-span-2">
-          <div class="w-full   flex items-center justify-end">
+        <div className="hidden md:block place-self-start md:col-span-2">
+          <div className="w-full   flex items-center justify-end">
             <Image
               src="/images/about-image.png"
               className="w-full  object-fill rounded-xl"

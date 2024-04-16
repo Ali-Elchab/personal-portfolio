@@ -7,8 +7,8 @@ const HeroSection = ({ emailRef }) => {
   return (
     <section className="h-160 mb-24 flex flex-col justify-center">
       <div className="grid grid-cols-1 sm:grid-cols-12 mt-5 mb-8 lg:mt-8 ">
-        <div class="md:order-last order-none my-4 md:mb-0 sm:col-span-5 md:justify-end flex items-center justify-center  lg:mt-0 ">
-          <div class="w-52 md:w-96 h-92 flex items-center justify-end">
+        <div className="md:order-last order-none my-4 md:mb-0 sm:col-span-5 md:justify-end flex items-center justify-center  lg:mt-0 ">
+          <div className="w-52 md:w-96 h-92 flex items-center justify-end">
             <Image src="/images/alichab.png" className="w-full h-full object-cover" alt="Ali Chab" width={300} height={300} />
           </div>
         </div>

@@ -37,7 +37,7 @@ const ProjectSection = () => {
   return (
     <div className="flex flex-col items-center">
       <h2 className="text-4xl font-bold text-white mb-16">My Projects</h2>
-      <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
         {projectsData.map((project) => (
           <ProjectCard
             key={project.id}

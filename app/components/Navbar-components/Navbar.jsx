@@ -1,15 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
-import { useRef } from "react";
 import MenuOverlay from "./MenuOverlay";
 import { XmarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import Logo from "../../../public/E.svg";
+import Logo from "../../../public/favicon.svg";
 
-const Navbar = ({ aboutRef, projectRef, emailRef }) => {
+const Navbar = ({ aboutRef, projectRef, emailRef, heroRef }) => {
   const scrollToRef = (ref) => {
-    window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
+    const scrollPosition = ref.current.offsetTop - 140;
+
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: "smooth",
+    });
   };
 
   const navLinks = [
@@ -22,7 +25,7 @@ const Navbar = ({ aboutRef, projectRef, emailRef }) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 border-b border-gray-600">
       <div className="flex flex-wrap items-center justify-between  p-6 lg:px-10 xl:px-16">
-        <div class="w-40 h-16 flex items-center justify-start">
+        <div className="w-40 h-16 flex items-center justify-start" onClick={() => scrollToRef(heroRef)}>
           <Image src={Logo} alt="Logo" className="w-full h-full object-cover" />
         </div>
         <div className="mobile-menu block md:hidden">
