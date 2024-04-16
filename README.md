@@ -3,6 +3,11 @@
 ## Introduction
 Welcome to my personal portfolio website built with Next.js and hosted on Vercel. This site showcases my work, skills, and projects in software development and IT.
 
+## Technologies Used
+- **Next.js**: A React framework for production.
+- **Tailwind CSS**: For styling and design.
+- **Vercel**: For deployment and hosting.
+
 ## Screenshots
 | Hero Section                      | About Me                               | 
 | ------------------------------------ | -------------------------------------------- | 
@@ -12,11 +17,11 @@ Welcome to my personal portfolio website built with Next.js and hosted on Vercel
 | -------------------------------------- | ---------------------------------------- | 
 | ![projects](https://github.com/Ali-Elchab/portfolio-website/assets/106644215/ea8117bf-3066-4787-ade1-8f55a89d9820) | ![contact](https://github.com/Ali-Elchab/portfolio-website/assets/106644215/58486750-df32-4f34-87c0-06f7e0c75971) |
 
+## Video Demo
 
-## Technologies Used
-- **Next.js**: A React framework for production.
-- **Tailwind CSS**: For styling and design.
-- **Vercel**: For deployment and hosting.
+https://github.com/Ali-Elchab/portfolio-website/assets/106644215/8befac2b-ac39-455c-8552-3cd04b3fa7f9
+
+
 
 ## Local Development
 To run this project locally, follow these steps:
