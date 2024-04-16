@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ali Elchab's Portfolio
 
-## Getting Started
+## Introduction
+Welcome to my personal portfolio website built with Next.js and hosted on Vercel. This site showcases my work, skills, and projects in software development and IT.
 
-First, run the development server:
+## Technologies Used
+- **Next.js**: A React framework for production.
+- **Tailwind CSS**: For styling and design.
+- **Vercel**: For deployment and hosting.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Screenshots
+| Hero Section                      | About Me                               | 
+| ------------------------------------ | -------------------------------------------- | 
+|![hero](https://github.com/Ali-Elchab/portfolio-website/assets/106644215/c1ef2d46-b20a-4979-8295-43b743d04d82) | ![about](https://github.com/Ali-Elchab/portfolio-website/assets/106644215/20e77a17-ab7a-4330-a7c1-002fd4d8d638) | 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Projects                             | Contact                               | 
+| -------------------------------------- | ---------------------------------------- | 
+| ![projects](https://github.com/Ali-Elchab/portfolio-website/assets/106644215/ea8117bf-3066-4787-ade1-8f55a89d9820) | ![contact](https://github.com/Ali-Elchab/portfolio-website/assets/106644215/58486750-df32-4f34-87c0-06f7e0c75971) |
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Video Demo
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+https://github.com/Ali-Elchab/portfolio-website/assets/106644215/8befac2b-ac39-455c-8552-3cd04b3fa7f9
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Local Development
+To run this project locally, follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/yourrepository.git
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
