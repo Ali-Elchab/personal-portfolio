@@ -11,9 +11,17 @@ const projectsData = [
     gitUrl: "https://github.com/Ali-Elchab/launchHub",
     previewUrl: "",
   },
-
   {
     id: 2,
+    imgUrl: "/images/projects/portfolio.png",
+    title: "Portfolio Website",
+    description:
+      "Personal portfolio website built with Next.js, displaying my software development skills and projects. Optimized for responsiveness with Tailwind CSS, it highlights my technical prowess and modern web solutions. Hosted on Vercel, it welcomes collaborators to explore my work and connect.",
+    gitUrl: "https://github.com/Ali-Elchab/portfolio-website",
+    previewUrl: "",
+  },
+  {
+    id: 3,
     imgUrl: "/images/projects/Group1.png",
     title: "Netflix Replica",
     description:
@@ -23,7 +31,7 @@ const projectsData = [
   },
 
   {
-    id: 3,
+    id: 4,
     imgUrl: "/images/projects/survey.png",
     title: "Survey Builder",
     description:
@@ -32,7 +40,7 @@ const projectsData = [
     previewUrl: "",
   },
   {
-    id: 4,
+    id: 5,
     imgUrl: "/images/projects/BankingSystem.png",
     title: "Banking System",
     description:
@@ -40,7 +48,7 @@ const projectsData = [
     gitUrl: "https://github.com/Ali-Elchab/BankingSystem",
   },
   {
-    id: 9,
+    id: 6,
     imgUrl: "/images/projects/simon-says.jpg",
     title: "Simon Says Game",
     description:
