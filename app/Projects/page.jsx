@@ -35,7 +35,7 @@ const projectsData = [
     imgUrl: "/images/projects/survey.png",
     title: "Survey Builder",
     description:
-      "Survey builder website that empowers users to create customized surveys effortlessly. Leveraging the power of React for frontend development and Laravel for backend support. Users can craft surveys tailored to their needs, whether it's for market research, customer feedback, or academic purposes. ",
+      "Survey builder website that empowers users to create customized surveys effortlessly. Leveraging the power of React for frontend development and NodeJs for backend support. Users can craft surveys tailored to their needs, whether it's for market research, customer feedback, or academic purposes. ",
     gitUrl: "https://github.com/Ali-Elchab/survey-builder",
     previewUrl: "",
   },
