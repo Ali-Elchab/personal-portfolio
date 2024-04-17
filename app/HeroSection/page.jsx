@@ -13,8 +13,8 @@ const HeroSection = ({ emailRef }) => {
           </div>
         </div>
         <div className="col-span-7 place-self-end text-center sm:text-left flex flex-col  gap-8  ">
-          <h1 className="text-white mb-4 text-4xl lg:text-6xl font-extrabold sm:text-5xl  ">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">Hello, I'm Ali Hadi </span>
+          <h1 className="text-white mb-0 sm:mb-4 text-4xl lg:text-6xl font-extrabold sm:text-5xl h-28 sm:h-auto ">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800 ">Hello, I'm Ali </span>
             <br />
             <TypeAnimation
               sequence={["Full Stack Developer", 1000, "Mobile Developer", 1000]}
@@ -23,7 +23,7 @@ const HeroSection = ({ emailRef }) => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE]  sm:text-lg lg:text-xl mb-6 w-3/4 md:w-full mx-auto text-left">
+          <p className="text-[#ADB7BE]  sm:text-lg lg:text-xl mb-6  md:w-full  text-left">
             I craft intuitive websites and apps by leveraging precise programming skills and a strong IT foundation.
           </p>
 
@@ -35,7 +35,7 @@ const HeroSection = ({ emailRef }) => {
               Hire Me
             </button>
             <a
-              href="https://drive.google.com/uc?export=download&id=13yosD0joLCR-JN3Vnxm_kL5HNfDCBYhf
+              href="https://drive.google.com/file/d/1QnAsEQ0pq6RaUMBwbcglXT0sV3udRhkq/view
 "
               download="Ali_Elchab_CV.pdf"
             >

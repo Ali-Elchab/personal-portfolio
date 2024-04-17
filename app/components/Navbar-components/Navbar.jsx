@@ -15,6 +15,10 @@ const Navbar = ({ aboutRef, projectRef, emailRef, heroRef }) => {
     });
   };
 
+  const toggleOverlay = () => {
+    setNavbarOpen(!navbarOpen);
+  };
+
   const navLinks = [
     { ref: aboutRef, title: "About" },
     { ref: projectRef, title: "Projects" },
@@ -69,7 +73,7 @@ const Navbar = ({ aboutRef, projectRef, emailRef, heroRef }) => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ? <MenuOverlay links={navLinks} closeOverlay={toggleOverlay} /> : null}
     </nav>
   );
 };

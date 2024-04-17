@@ -156,7 +156,7 @@ const AboutSection = () => {
             eager to expand my knowledge, especially in the evolving world of AI. For me, coding is a pathway to innovate and
             connect the world.
           </p>
-          <div className=" flex flex-row mt-8">
+          <div className=" flex flex-row  mt-8">
             <TabButton active={tab === "skills"} selectTab={() => handleTabChange("skills")}>
               Skills
             </TabButton>

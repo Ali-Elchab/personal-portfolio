@@ -5,7 +5,7 @@ import Link from "next/link";
 const ProjectCard = ({ imgUrl, title, description, gitUrl }) => {
   return (
     <div>
-      <div className="h-52 md:h-72 rounded-t-xl relative group" style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}>
+      <div className="h-56 md:h-72 rounded-t-xl relative group" style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}>
         <div className=" overlay  absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0  hidden items-center justify-center group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
           <Link
             href={gitUrl}
@@ -17,7 +17,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl }) => {
           </Link>
         </div>
       </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4 h-60 text-justify overflow-hidden">
+      <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4 h-64 overflow-hidden">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-[#ADB7BE]  h-52 overflow-y-visible">{description}</p>
       </div>

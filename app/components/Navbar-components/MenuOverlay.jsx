@@ -1,8 +1,14 @@
 import React from "react";
 
-const MenuOverlay = ({ links }) => {
+const MenuOverlay = ({ links, closeOverlay }) => {
   const scrollToRef = (ref) => {
-    window.scrollTo(0, ref.current.offsetTop);
+    const scrollPosition = ref.current.offsetTop - 140;
+
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: "smooth",
+    });
+    closeOverlay();
   };
 
   return (

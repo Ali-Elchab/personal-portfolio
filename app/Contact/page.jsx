@@ -8,9 +8,9 @@ import Link from "next/link";
 import Image from "next/image";
 const EmailSection = () => {
   return (
-    <section className="flex flex-col p-3 my-24 h-96">
+    <section className="flex flex-col p-0 md:p-3 md:my-24 my-12 h-96 ">
       <h2 className="text-4xl font-bold text-white mb-4  text-center">Get in touch</h2>
-      <div className="flex flex-col md:flex-row h-full p-8 justify-around">
+      <div className="flex flex-col md:flex-row h-full p-0 md:p-8 justify-around gap-4">
         <p className="text-[#ADB7BE] text-lg w-full md:w-1/2">
           {""}
           I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say
