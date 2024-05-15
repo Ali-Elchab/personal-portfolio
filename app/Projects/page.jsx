@@ -29,9 +29,16 @@ const projectsData = [
     gitUrl: "https://github.com/Ali-Elchab/netflix-replica",
     previewUrl: "",
   },
-
   {
     id: 4,
+    imgUrl: "/images/projects/bookly.png",
+    title: "Bookly App",
+    description:
+      "A Flutter application that fetches Google Books API to display books about programming. It showcases the use of Bloc and Cubit architectures for state management, focusing on best practices and the practical use of MVVM.",
+    gitUrl: "https://github.com/Ali-Elchab/bookly_app",
+  },
+  {
+    id: 5,
     imgUrl: "/images/projects/survey.png",
     title: "Survey Builder",
     description:
@@ -40,7 +47,7 @@ const projectsData = [
     previewUrl: "",
   },
   {
-    id: 5,
+    id: 6,
     imgUrl: "/images/projects/BankingSystem.png",
     title: "Banking System",
     description:
@@ -48,7 +55,7 @@ const projectsData = [
     gitUrl: "https://github.com/Ali-Elchab/BankingSystem",
   },
   {
-    id: 6,
+    id: 7,
     imgUrl: "/images/projects/simon-says.jpg",
     title: "Simon Says Game",
     description:
