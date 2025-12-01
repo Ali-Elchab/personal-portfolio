@@ -6,40 +6,47 @@ import { TypeAnimation } from "react-type-animation";
 const HeroSection = ({ emailRef }) => {
   return (
     <section className="h-160 mb-24 flex flex-col justify-center">
-      <div className="grid grid-cols-1 sm:grid-cols-12 mt-5 mb-8 lg:mt-8 ">
-        <div className="md:order-last order-none my-4 md:mb-0 sm:col-span-5 md:justify-end flex items-center justify-center  lg:mt-0 ">
+      <div className="grid grid-cols-1 sm:grid-cols-12 mt-5 mb-8 lg:mt-8">
+        <div className="md:order-last order-none my-4 md:mb-0 sm:col-span-5 md:justify-end flex items-center justify-center lg:mt-0">
           <div className="w-52 md:w-96 h-92 flex items-center justify-end">
             <Image src="/images/alichab.png" className="w-full h-full object-cover" alt="Ali Chab" width={300} height={300} />
           </div>
         </div>
-        <div className="col-span-7 place-self-end text-center sm:text-left flex flex-col  gap-8  ">
-          <h1 className="text-white mb-0 sm:mb-4 text-4xl lg:text-6xl font-extrabold sm:text-5xl h-28 sm:h-auto ">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800 ">Hello, I'm Ali </span>
+        <div className="col-span-7 place-self-end text-center sm:text-left flex flex-col gap-6">
+          <div className="text-sm uppercase tracking-[0.25em] text-blue-200 flex flex-wrap gap-3">
+            <span>Beirut, Lebanon</span>
+            <span className="hidden sm:inline">•</span>
+            <span>Canadian-Lebanese</span>
+          </div>
+          <h1 className="text-white mb-0 sm:mb-2 text-4xl lg:text-6xl font-extrabold sm:text-5xl h-28 sm:h-auto">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700">Ali Al Hadi Elchab</span>
             <br />
             <TypeAnimation
-              sequence={["Full Stack Developer", 1000, "Mobile Developer", 1000]}
+              sequence={[
+                "Software Engineer",
+                1100,
+                "Flutter Developer",
+                1100,
+              ]}
               wrapper="span"
               speed={40}
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE]  sm:text-lg lg:text-xl mb-6  md:w-full  text-left">
-            I craft intuitive websites and apps by leveraging precise programming skills and a strong IT foundation.
+          <p className="text-[#ADB7BE] sm:text-lg lg:text-xl mb-4 md:w-full text-left leading-relaxed">
+            Software engineer with a backend mindset: I design reliable databases, secure auth, and practical APIs. After shipping
+            Laravel products, I'm shifting into Java/Spring Boot while keeping a system-wide view from my IT background.
           </p>
 
-          <div>
+          <div className="flex flex-wrap gap-4">
             <button
               onClick={() => window.scrollTo({ top: emailRef.current.offsetTop, behavior: "smooth" })}
-              className="px-6 py-3 w-40 rounded-full   mr-4 bg-gradient-to-br from-blue-300 via-blue-500 to-blue-500  hover:bg-slate-200 text-white"
+              className="px-6 py-3 w-40 rounded-full mr-4 bg-gradient-to-br from-blue-300 via-blue-500 to-blue-500 hover:bg-slate-200 text-white"
             >
               Hire Me
             </button>
-            <a
-              href="https://drive.google.com/file/d/1-py2c2I0pKCeHNCjU9lB6LhSoECoUt0f/view
-"
-              download="Ali_Elchab_CV.pdf"
-            >
-              <button className="px-6 py-3 w-40 rounded-full  mr-4 bg-transparebt hover:bg-slate-800 text-white border border-white mt-3">
+            <a href="https://drive.google.com/file/d/1-py2c2I0pKCeHNCjU9lB6LhSoECoUt0f/view" download="Ali_Elchab_CV.pdf">
+              <button className="px-6 py-3 w-40 rounded-full mr-4 bg-transparent hover:bg-slate-800 text-white border border-white">
                 Download CV
               </button>
             </a>

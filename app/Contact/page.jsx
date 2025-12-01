@@ -11,10 +11,9 @@ const EmailSection = () => {
     <section className="flex flex-col p-0 md:p-3 md:my-24 my-12 h-96 ">
       <h2 className="text-4xl font-bold text-white mb-4  text-center">Get in touch</h2>
       <div className="flex flex-col md:flex-row h-full p-0 md:p-8 justify-around gap-4">
-        <p className="text-[#ADB7BE] text-lg w-full md:w-1/2">
-          {""}
-          I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say
-          hi, I'll try my best to get back to you!
+        <p className="text-[#ADB7BE] text-lg w-full md:w-1/2 leading-relaxed">
+          Backend-minded engineer open to Java/Spring Boot and Laravel roles. I respond quickest by phone or email, but feel free
+          to connect through any of the links below.
         </p>
         <div className="socials flex flex-col gap-3">
           <div className="flex items-center gap-2">
@@ -24,7 +23,7 @@ const EmailSection = () => {
             <p className="text-[#ADB7BE] text-lg ">+961 71 461 762</p>
           </div>
           <div className="flex items-center gap-2">
-            <Link href="" className="mr-2">
+            <Link href="mailto:alielchab01@gmail.com" className="mr-2">
               <MdOutlineEmail className="w-12 h-12" />
             </Link>
             <p className="text-[#ADB7BE] text-lg ">alielchab01@gmail.com</p>
@@ -40,6 +39,12 @@ const EmailSection = () => {
               <Image src={LinkedInIcon} alt="Github Icon" />
             </Link>
             <p className="text-[#ADB7BE] text-lg ">linkedin.com/in/ali-elchab/</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Link href="https://ali-elchab.vercel.app/">
+              <Image src={LinkedInIcon} alt="Portfolio Icon" className="w-12 h-12" />
+            </Link>
+            <p className="text-[#ADB7BE] text-lg ">Portfolio Website</p>
           </div>
         </div>
       </div>

@@ -8,34 +8,38 @@ const TAB_DATA = [
     id: "skills",
     title: "Skills",
     content: (
-      <ul className="list-disc pl-2 ml-2 ">
-        <li className="mb-4">
-          <strong>Programming (and Scripting) Languages:</strong> C#, Python, JavaScript, PHP, SQL, Dart, Java, TypeScript
-        </li>
-        <li className="mb-4">
-          <strong>Database Management Systems:</strong> MySQL, MongoDB
-        </li>
-        <li className="mb-4">
-          <strong>Frameworks, Libraries and Run-time Environments:</strong> DotNet, Laravel, React, Flutter, Angular, Node.js,
-          Express, Electron.js
-        </li>
-        <li className="mb-4">
-          <strong>Version Control, Cloud Services and Tools:</strong> Git, GitHub, AWS, Firebase, Figma
-        </li>
-        <li className="mb-4">
-          <strong>Theory:</strong> Complexity Analysis, Data Structures and Algorithms, Design Patterns, OOP
-        </li>
-      </ul>
+      <div className="space-y-3 text-base">
+        <p>
+          Backend-first approach: I care about clean DB schemas, predictable APIs, and reliable auth. Currently leaning into
+          Java/Spring Boot after shipping Laravel products.
+        </p>
+        <ul className="list-disc pl-4 space-y-2">
+          <li>
+            <strong>Backend:</strong> REST APIs, SQL/MySQL, DB design, JWT/OAuth, caching concepts, queues
+          </li>
+          <li>
+            <strong>Languages:</strong> PHP, Java, Dart, JavaScript, C#
+          </li>
+          <li>
+            <strong>Frameworks:</strong> Laravel, Flutter, Next.js, Spring (foundational)
+          </li>
+          <li>
+            <strong>Tools:</strong> Git, Firebase, Postman, Docker (basic), Linux
+          </li>
+          <li>
+            <strong>Languages spoken:</strong> English (fluent), Arabic (native)
+          </li>
+        </ul>
+      </div>
     ),
   },
   {
     id: "education",
     title: "Education",
     content: (
-      <ul className="list-disc pl-2 ml-2">
+      <ul className="list-disc pl-2 ml-2 space-y-2">
         <li>
-          {" "}
-          <strong>Bachelors Degree in Computer Engineering – Lebanese International University (October 2018 – July 2021)</strong>
+          <strong>Bachelor in Computer Engineering</strong> — Lebanese International University, Lebanon (Oct 2018 – Jul 2021)
         </li>
       </ul>
     ),
@@ -44,40 +48,25 @@ const TAB_DATA = [
     id: "experience",
     title: "Experience",
     content: (
-      <ul className="list-disc pl-2 ml-2">
-        <li className="mb-4">
-          <strong>Full Stack Web Development Bootcamp – SE Factory, Beirut Governorate, Lebanon (Oct 2023 - Jan 2024)</strong>
-          <ul className="list-disc pl-2 ml-8">
-            <li>
-              Intensive 12-week hybrid program focusing on full stack web development using HTML, CSS, JavaScript, React.js, PHP,
-              Laravel, Node.js, Express, and MySQL.
-            </li>
-            <li>Participated in hands-on workshops, completed projects, and tackled assignments to hone technical skills.</li>
-            <li>Utilized GitHub for version control, Postman for API testing, and Figma for wireframing and mockups.</li>
-            <li>Developed soft skills such as management and collaboration through workshops and team projects.</li>
-            <li>Implemented collaborative development practices on GitHub and successfully completed several projects.</li>
+      <ul className="list-disc pl-2 ml-2 space-y-4">
+        <li className="space-y-2">
+          <strong>Full-Stack Developer — Brain Stores, Beirut (Apr 2024 – Present)</strong>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Designed REST API endpoints with validation, SQL queries, and MySQL schema optimizations.</li>
+            <li>Built ecommerce flows: checkout, cart, addresses, and product filtering logic.</li>
+            <li>Integrated auth with tokens and Google Sign-In; maintained Flutter app (clean architecture, Cubit, GoRouter).</li>
           </ul>
         </li>
-        <li className="mb-4">
-          <strong>IT Technician – Cosmaroma Inc, Toronto, ON (May 2022 – Aug 2023)</strong>
-          <ul className="list-disc pl-2 ml-8">
-            <li>
-              Headed IT department operations encompassing Office 365, Wi-Fi infrastructure, and Microsoft Azure AD. Collaborated
-              across departments, supported accounting functions with QuickBooks and addressed stakeholder queries.
-            </li>
-            <li>
-              Managed system administration, ensured seamless POS operations, maintained LAN assets, conducted repairs, and
-              delivered 2nd level tech support.
-            </li>
+        <li className="space-y-2">
+          <strong>IT Technician — Cosmaroma Inc, Toronto (May 2022 – Aug 2023)</strong>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Managed Azure AD, Office 365, servers, POS, and Windows/Linux environments.</li>
           </ul>
         </li>
-        <li className="mb-4">
-          <strong>IT Helpdesk – Vast, Beirut, Lebanon (Aug 2020 – April 2022)</strong>
-          <ul className="list-disc pl-2 ml-8">
-            <li>
-              Oversaw the seamless operation of 100+ Windows systems, spearheaded upgrades, and ensured optimal performance for
-              200+ employees, driving a 10% boost in efficiency through a comprehensive building-wide OS upgrade.
-            </li>
+        <li className="space-y-2">
+          <strong>IT Helpdesk — Vast, Beirut (Aug 2020 – Apr 2022)</strong>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Handled 100+ Windows/Linux systems, led OS upgrades, and improved operations for 200+ staff.</li>
           </ul>
         </li>
       </ul>
@@ -87,38 +76,15 @@ const TAB_DATA = [
     id: "certifications",
     title: "Certifications",
     content: (
-      <ul className="list-disc pl-2 ml-2">
-        <li className="mb-4 text-justify">
-          <strong>Full-Stack Web Development Bootcamp – SE Factory, Lebanon (October 2023 – January 2024)</strong>
-          <ul className="list-disc pl-2 ml-8">
-            <li>
-              Completed an intensive 12-week program covering cloud architecture, front-end and back-end development, source
-              control, and web application security.
-            </li>
-            <li>Engaged in lectures, workshops, and projects to develop comprehensive full-stack development skills.</li>
-          </ul>
+      <ul className="list-disc pl-2 ml-2 space-y-3">
+        <li>
+          <strong>Flutter & Dart – Complete Guide (Udemy), 2024</strong>
         </li>
-        <li className="mb-4 text-justify">
-          <strong>Foundations of Computer Science Course – SE Factory, Lebanon (July 2023 – September 2023)</strong>
-          <ul className="list-disc pl-2 ml-8 text-justify">
-            <li>
-              Covered control flow, data structures, complexity analysis, and algorithms using Python over 9 weeks in a part-time
-              format.
-            </li>
-            <li>Participated in lectures, workshops, and projects focusing on core computer science concepts.</li>
-          </ul>
+        <li>
+          <strong>SE Factory Full-Stack Bootcamp, 2024</strong> — Laravel, JS, Git, APIs; final project in Flutter
         </li>
-        <li className="mb-4">
-          <strong>The Web Developer Bootcamp – Udemy (July 2023 – September 2023)</strong>
-          <ul className="list-disc pl-2 ml-8 ">
-            <li>Completed over 70 hours of training from HTML5 to Node.js, React.js, and more, through online learning.</li>
-          </ul>
-        </li>
-        <li className="mb-4">
-          <strong>Flutter And Dart - The Complete Guide – Udemy (January 2024)</strong>
-          <ul className="list-disc pl-2 ml-8 text-justify">
-            <li>Explored the Flutter SDK & Dart; learned to build native iOS and Android apps through the Flutter Framework.</li>
-          </ul>
+        <li>
+          <strong>CS Foundations – SE Factory, 2023</strong> — Python, data structures, algorithms
         </li>
       </ul>
     ),
@@ -127,7 +93,7 @@ const TAB_DATA = [
 
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -138,10 +104,10 @@ const AboutSection = () => {
     <section className="text-white">
       <div className="md:grid md:grid-cols-5  gap-8 items-center py-8  xl:gap-16 sm:py-16 my-8">
         <div className="hidden md:block place-self-start md:col-span-2">
-          <div className="w-full   flex items-center justify-end">
+          <div className="w-full flex items-center justify-end">
             <Image
               src="/images/about-image.png"
-              className="w-full  object-fill rounded-xl"
+              className="w-full object-fill rounded-xl"
               width={400}
               height={500}
               alt="PC Setup"
@@ -150,13 +116,12 @@ const AboutSection = () => {
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full md:col-span-3">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg text-justify">
-            I'm a passionate software developer with three years of IT experience, skilled in creating intuitive web and mobile
-            applications. My technical background has empowered me to excel in the dynamic field of software development. I'm
-            eager to expand my knowledge, especially in the evolving world of AI. For me, coding is a pathway to innovate and
-            connect the world.
+          <p className="text-base lg:text-lg text-justify leading-relaxed">
+            Software engineer focused on backend fundamentals and scalable logic. My IT roots keep me systems-minded, and my
+            current focus is moving deeper into Java and Spring Boot while still delivering Laravel and Flutter products end to
+            end.
           </p>
-          <div className=" flex flex-row  mt-8">
+          <div className="flex flex-row mt-8 flex-wrap gap-3">
             <TabButton active={tab === "skills"} selectTab={() => handleTabChange("skills")}>
               Skills
             </TabButton>
