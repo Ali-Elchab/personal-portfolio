@@ -35,7 +35,7 @@ const HeroSection = ({ emailRef }) => {
               Hire Me
             </button>
             <a
-              href="https://drive.google.com/file/d/1QnAsEQ0pq6RaUMBwbcglXT0sV3udRhkq/view
+              href="https://drive.google.com/file/d/1-py2c2I0pKCeHNCjU9lB6LhSoECoUt0f/view
 "
               download="Ali_Elchab_CV.pdf"
             >
