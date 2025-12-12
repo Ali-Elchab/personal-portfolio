@@ -64,7 +64,7 @@ const HeroSection = ({ emailRef, projectRef }) => {
               onClick={() =>
                 emailRef?.current &&
                 window.scrollTo({
-                  top: emailRef.current.offsetTop,
+                  top: emailRef.current.offsetTop-130,
                   behavior: "smooth",
                 })
               }
@@ -76,7 +76,7 @@ const HeroSection = ({ emailRef, projectRef }) => {
               onClick={() =>
                 projectRef?.current &&
                 window.scrollTo({
-                  top: projectRef.current.offsetTop,
+                  top: projectRef.current.offsetTop -130,
                   behavior: "smooth",
                 })
               }
