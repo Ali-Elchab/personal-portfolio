@@ -16,9 +16,9 @@ const Home = () => {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar aboutRef={aboutRef} projectRef={projectRef} emailRef={emailRef} heroRef={heroRef} />
-      <div className="container mx-auto max-w-screen-xl mt-24 p-10 xl:px-0 w-full">
+      <div className="container mx-auto max-w-screen-xl mt-24 px-6 sm:px-8 lg:px-10 xl:px-0 w-full">
         <div ref={heroRef}>
-          <HeroSection emailRef={emailRef} />
+          <HeroSection emailRef={emailRef} projectRef={projectRef} />
         </div>
         <div ref={aboutRef}>
           <AboutSection />

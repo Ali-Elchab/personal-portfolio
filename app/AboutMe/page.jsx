@@ -115,7 +115,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full md:col-span-3">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-white mb-4 text-center md:text-left">About Me</h2>
           <p className="text-base lg:text-lg text-justify leading-relaxed">
             Software engineer focused on backend fundamentals and scalable logic. My IT roots keep me systems-minded, and my
             current focus is moving deeper into Java and Spring Boot while still delivering Laravel and Flutter products end to

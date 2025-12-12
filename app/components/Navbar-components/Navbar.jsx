@@ -7,6 +7,7 @@ import Logo from "../../../public/favicon.svg";
 
 const Navbar = ({ aboutRef, projectRef, emailRef, heroRef }) => {
   const scrollToRef = (ref) => {
+    if (!ref?.current) return;
     const scrollPosition = ref.current.offsetTop - 140;
 
     window.scrollTo({
@@ -28,8 +29,8 @@ const Navbar = ({ aboutRef, projectRef, emailRef, heroRef }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 border-b border-gray-600">
-      <div className="flex flex-wrap items-center justify-between  p-6 lg:px-10 xl:px-16">
-        <div className="w-40 h-16 flex items-center justify-start" onClick={() => scrollToRef(heroRef)}>
+      <div className="flex flex-wrap items-center justify-between p-4 sm:p-6 lg:px-10 xl:px-16">
+        <div className="w-32 sm:w-40 h-12 sm:h-16 flex items-center justify-start" onClick={() => scrollToRef(heroRef)}>
           <Image src={Logo} alt="Logo" className="w-full h-full object-cover" />
         </div>
         <div className="mobile-menu block md:hidden">
@@ -59,12 +60,12 @@ const Navbar = ({ aboutRef, projectRef, emailRef, heroRef }) => {
           )}
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-6 lg:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <button
                   onClick={() => scrollToRef(link.ref)}
-                  className="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-2xl rounded md:p-0 hover:text-white"
+                  className="block py-2 pl-3 pr-4 text-[#ADB7BE] text-base md:text-xl xl:text-2xl rounded md:p-0 hover:text-white"
                 >
                   {link.title}
                 </button>

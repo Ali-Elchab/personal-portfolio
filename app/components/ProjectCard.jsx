@@ -1,25 +1,47 @@
 import React from "react";
-import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl }) => {
   return (
-    <div>
-      <div className="h-56 md:h-72 rounded-t-xl relative group" style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}>
-        <div className=" overlay  absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0  hidden items-center justify-center group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
-          <Link
-            href={gitUrl}
-            className="h-14 mr-2 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <CodeBracketIcon className="h-10 w-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#ADB7BE] cursor-pointer hover:text-white" />
-          </Link>
+    <div className="relative group rounded-xl overflow-hidden h-64 md:h-72 lg:h-80 w-full shadow-lg bg-[#0f1117]">
+      <Image
+        src={imgUrl}
+        alt={`${title} preview`}
+        fill
+        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+        className="object-cover"
+        priority={false}
+      />
+
+      <div className="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-black/10 via-black/60 to-black/80 opacity-100 transition-opacity duration-300 ease-out pointer-events-auto lg:opacity-0 lg:group-hover:opacity-100 lg:pointer-events-none lg:group-hover:pointer-events-auto">
+        <div className="flex justify-end p-3">
+          {gitUrl ? (
+            <Link
+              href={gitUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm text-white backdrop-blur hover:bg-white/20 transition"
+            >
+              <CodeBracketIcon className="h-5 w-5" />
+              <span className="hidden sm:inline">Repo</span>
+            </Link>
+          ) : (
+            <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white/70 backdrop-blur">
+              Private
+            </span>
+          )}
         </div>
-      </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4 h-64 overflow-hidden">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]  h-52 overflow-y-visible">{description}</p>
+
+        <div className="p-5 bg-gradient-to-t from-black/80 via-black/60 to-transparent">
+          <h5 className="text-lg font-semibold text-white mb-2">{title}</h5>
+          {description ? (
+            <p className="text-sm leading-relaxed text-white/80">{description}</p>
+          ) : (
+            <p className="text-sm leading-relaxed text-white/60 italic">Description coming soon.</p>
+          )}
+        </div>
       </div>
     </div>
   );

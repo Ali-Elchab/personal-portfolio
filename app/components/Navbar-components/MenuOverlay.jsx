@@ -2,6 +2,7 @@ import React from "react";
 
 const MenuOverlay = ({ links, closeOverlay }) => {
   const scrollToRef = (ref) => {
+    if (!ref?.current) return;
     const scrollPosition = ref.current.offsetTop - 140;
 
     window.scrollTo({
