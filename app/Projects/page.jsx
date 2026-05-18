@@ -10,6 +10,7 @@ const projectsData = [
     gitUrl: "",
     playStoreUrl: "",
     appStoreUrl: "",
+    badge: "Client Project",
   },
   {
     id: 4,
@@ -20,6 +21,7 @@ const projectsData = [
     gitUrl: "",
     playStoreUrl: "",
     appStoreUrl: "",
+    badge: "Client Project",
   },
   {
     id: 2,
@@ -30,6 +32,7 @@ const projectsData = [
     gitUrl: "",
     playStoreUrl: "",
     appStoreUrl: "",
+    badge: "Client Project",
   },
   {
     id: 10,
@@ -66,7 +69,7 @@ const projectsData = [
     imgUrl: "/images/projects/flutter-skeleton.jpg",
     title: "Flutter Starter Skeleton",
     description:
-      "A production-ready Flutter starter kit designed for scalable apps with clean architecture, Riverpod state management, Drift local persistence, and GoRouter navigation. Flexible enough for any type of app (e-commerce, SaaS, or internal tools).",
+      "A production-ready Flutter starter kit designed for scalable apps. Includes clean architecture, Cubit state management, GoRouter navigation, reusable auth flow, API handler, theming, localization, and environment config. Cut new project setup time by 60%.",
     gitUrl: "https://github.com/Ali-Elchab/flutter_skeleton",
     playStoreUrl: "",
     appStoreUrl: "",
@@ -77,7 +80,7 @@ const projectsData = [
     title: "Personal eCommerce App",
     description:
       "Full-featured eCommerce mobile app built independently — upgraded UI and flows from a client project. Includes auth, category browsing, product search, cart, promo handling, and checkout. Built with Flutter clean architecture and a Laravel backend.",
-    gitUrl: "https://github.com/Ali-Elchab/ecom_app",
+    gitUrl: "",
     playStoreUrl: "",
     appStoreUrl: "",
   },
@@ -97,6 +100,7 @@ const ProjectSection = () => {
             gitUrl={project.gitUrl}
             playStoreUrl={project.playStoreUrl}
             appStoreUrl={project.appStoreUrl}
+            badge={project.badge}
           />
         ))}
       </div>

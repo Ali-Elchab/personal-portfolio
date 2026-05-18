@@ -6,7 +6,7 @@ import Link from "next/link";
 const storeLinkClass =
   "inline-flex items-center rounded-full bg-white/10 px-2.5 py-1 text-xs text-white backdrop-blur hover:bg-white/20 transition whitespace-nowrap";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, playStoreUrl, appStoreUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl, playStoreUrl, appStoreUrl, badge }) => {
   const hasLinks = gitUrl || playStoreUrl || appStoreUrl;
 
   return (
@@ -40,7 +40,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, playStoreUrl, appStor
           ) : null}
           {!hasLinks ? (
             <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white/70 backdrop-blur">
-              Private
+              {badge || "Private"}
             </span>
           ) : null}
         </div>

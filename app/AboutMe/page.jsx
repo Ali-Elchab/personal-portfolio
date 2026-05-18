@@ -1,6 +1,5 @@
 "use client";
 import React, { useTransition, useState } from "react";
-import Image from "next/image";
 import TabButton from "../components/TabButton";
 
 const TAB_DATA = [
@@ -113,42 +112,29 @@ const AboutSection = () => {
     });
   };
   return (
-    <section className="text-white py-12 sm:py-16">
-      <div className="md:grid md:grid-cols-5 gap-8 items-center xl:gap-16">
-        <div className="hidden md:block place-self-start md:col-span-2">
-          <div className="w-full flex items-center justify-end">
-            <Image
-              src="/images/alichab.png"
-              className="w-full object-cover rounded-xl"
-              width={400}
-              height={500}
-              alt="Ali Chab"
-            />
-          </div>
+    <section className="text-white py-8 sm:py-12 w-full">
+      <div className="w-full text-left flex flex-col items-start">
+        <h2 className="text-4xl font-bold text-white mb-8 sm:mb-12 text-left">About Me</h2>
+        <p className="text-base lg:text-lg text-left leading-relaxed w-full">
+          Flutter developer with 2+ years shipping production apps end to end. I work with clean architecture, Cubit, and
+          Laravel backends — focused on building things that actually hold up when real users touch them. Canadian-Lebanese,
+          based in Beirut, open to remote.
+        </p>
+        <div className="flex flex-row mt-8 flex-wrap gap-3">
+          <TabButton active={tab === "skills"} selectTab={() => handleTabChange("skills")}>
+            Skills
+          </TabButton>
+          <TabButton active={tab === "experience"} selectTab={() => handleTabChange("experience")}>
+            Experience
+          </TabButton>
+          <TabButton active={tab === "education"} selectTab={() => handleTabChange("education")}>
+            Education
+          </TabButton>
+          <TabButton active={tab === "certifications"} selectTab={() => handleTabChange("certifications")}>
+            Certifications
+          </TabButton>
         </div>
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full md:col-span-3">
-          <h2 className="text-4xl font-bold text-white mb-8 sm:mb-12 text-center md:text-left">About Me</h2>
-          <p className="text-base lg:text-lg text-left md:text-justify leading-relaxed">
-            Flutter developer with 2+ years shipping production apps end to end. I work with clean architecture, Cubit, and
-            Laravel backends — focused on building things that actually hold up when real users touch them. Canadian-Lebanese,
-            based in Beirut, open to remote.
-          </p>
-          <div className="flex flex-row mt-8 flex-wrap gap-3">
-            <TabButton active={tab === "skills"} selectTab={() => handleTabChange("skills")}>
-              Skills
-            </TabButton>
-            <TabButton active={tab === "experience"} selectTab={() => handleTabChange("experience")}>
-              Experience
-            </TabButton>
-            <TabButton active={tab === "education"} selectTab={() => handleTabChange("education")}>
-              Education
-            </TabButton>
-            <TabButton active={tab === "certifications"} selectTab={() => handleTabChange("certifications")}>
-              Certifications
-            </TabButton>
-          </div>
-          <div className="mt-8"> {TAB_DATA.find((t) => t.id === tab).content}</div>
-        </div>
+        <div className="mt-8"> {TAB_DATA.find((t) => t.id === tab).content}</div>
       </div>
     </section>
   );

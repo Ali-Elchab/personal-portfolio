@@ -3,7 +3,7 @@ import React from "react";
 const MenuOverlay = ({ links, closeOverlay }) => {
   const scrollToRef = (ref) => {
     if (!ref?.current) return;
-    const scrollPosition = ref.current.offsetTop - 140;
+    const scrollPosition = ref.current.offsetTop - 100;
 
     window.scrollTo({
       top: scrollPosition,
@@ -13,7 +13,7 @@ const MenuOverlay = ({ links, closeOverlay }) => {
   };
 
   return (
-    <ul className="flex flex-col py-4 items-center">
+    <ul className="flex flex-col py-2 items-center">
       {links.map((link, index) => (
         <li key={index}>
           <button

@@ -5,11 +5,11 @@ import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = ({ emailRef, projectRef }) => {
   return (
-    <section className="min-h-[70vh] md:min-h-screen  mb-16 sm:mb-24 flex flex-col justify-center items-center md:items-start">
-      <div className="flex flex-col sm:grid sm:grid-cols-12 mt-2 sm:mt-5 mb-8 lg:mt-8 gap-12 sm:gap-6 items-center sm:justify-items-stretch w-full">
-        {/* Mobile layout: image left of location text */}
-        <div className="w-full sm:hidden flex items-center justify-center gap-4">
-          <div className="w-48 h-auto">
+    <section className="min-h-0 md:min-h-screen mb-16 sm:mb-24 flex flex-col justify-start md:justify-center items-center md:items-start w-full">
+      <div className="flex flex-col sm:grid sm:grid-cols-12 sm:mt-5 mb-8 lg:mt-8 gap-8 sm:gap-6 items-center sm:justify-items-stretch w-full">
+        {/* Mobile layout: image above location */}
+        <div className="w-full sm:hidden flex flex-col items-center gap-3 pt-2">
+          <div className="w-36 h-auto shrink-0">
             <Image
               src="/images/alichab.png"
               className="block w-full h-auto object-cover"
@@ -18,7 +18,7 @@ const HeroSection = ({ emailRef, projectRef }) => {
               height={300}
             />
           </div>
-          <div className="text-sm uppercase tracking-[0.25em] text-blue-200 flex flex-wrap gap-2">
+          <div className="text-xs uppercase tracking-widest text-blue-200 flex flex-col items-center gap-1 text-center">
             <span>Beirut, Lebanon</span>
             <span>Canadian-Lebanese</span>
           </div>
@@ -37,12 +37,12 @@ const HeroSection = ({ emailRef, projectRef }) => {
           </div>
         </div>
 
-        <div className="col-span-7 text-center sm:text-left flex flex-col gap-6 w-full items-center sm:items-start">
+        <div className="col-span-7 text-center sm:text-left flex flex-col gap-5 sm:gap-6 w-full items-center sm:items-start">
           <div className="hidden sm:flex text-sm uppercase tracking-[0.25em] text-blue-200 flex-wrap gap-3 justify-start">
             <span>Beirut, Lebanon</span>
             <span>Canadian-Lebanese</span>
           </div>
-          <h1 className="text-white mb-0 sm:mb-2 text-3xl sm:text-4xl lg:text-6xl font-extrabold leading-tight">
+          <h1 className="text-white mb-0 sm:mb-2 text-2xl sm:text-4xl lg:text-6xl font-extrabold leading-tight w-full">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700">
               Ali Al Hadi Elchab
             </span>
@@ -63,7 +63,7 @@ const HeroSection = ({ emailRef, projectRef }) => {
               onClick={() =>
                 emailRef?.current &&
                 window.scrollTo({
-                  top: emailRef.current.offsetTop-130,
+                  top: emailRef.current.offsetTop - 100,
                   behavior: "smooth",
                 })
               }
@@ -71,11 +71,19 @@ const HeroSection = ({ emailRef, projectRef }) => {
             >
               Hire Me
             </button>
+            <a
+              href="https://drive.google.com/file/d/1DkFL2wSY0eSUvpE6e4L0yo2pWv0_SsMX/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 w-full sm:w-40 rounded-full sm:mr-4 bg-transparent hover:bg-slate-800 border border-white text-white text-center"
+            >
+              Download CV
+            </a>
             <button
               onClick={() =>
                 projectRef?.current &&
                 window.scrollTo({
-                  top: projectRef.current.offsetTop -130,
+                  top: projectRef.current.offsetTop - 100,
                   behavior: "smooth",
                 })
               }
