@@ -2,80 +2,105 @@ import ProjectCard from "../components/ProjectCard";
 
 const projectsData = [
   {
-    id: 1,
-    imgUrl: "/images/projects/flutter-skeleton.jpg",
-    title: "Flutter Starter Skeleton",
+    id: 3,
+    imgUrl: "/images/projects/wms.jpg",
+    title: "CiviSol — Warehouse Management System",
     description:
-      "A production-ready Flutter starter kit designed for scalable apps with clean architecture, Riverpod state management, Drift local persistence, and GoRouter navigation. Flexible enough for any type of app (e-commerce, SaaS, or internal tools).",
-    gitUrl: "https://github.com/Ali-Elchab/launchHub",
-    previewUrl: "",
+      "Warehouse management system for inventory control and stock operations. Handles multi-warehouse flows, barcode scanning, live stock syncing, purchases, and sales across multiple user roles — connected to a Laravel REST backend.",
+    gitUrl: "",
+    playStoreUrl: "",
+    appStoreUrl: "",
+  },
+  {
+    id: 4,
+    imgUrl: "/images/projects/excellence.jpg",
+    title: "Excellence Quality — CRM Platform",
+    description:
+      "CRM and lead management platform with client portal, activity tracking, service management, and multi-role access. Built end to end in Flutter with a Laravel backend.",
+    gitUrl: "",
+    playStoreUrl: "",
+    appStoreUrl: "",
   },
   {
     id: 2,
     imgUrl: "/images/projects/freshzone.jpg",
     title: "FreshZone",
     description:
-      "A Flutter-based e-commerce application for a supermarket, featuring category-based browsing, product search, cart management, promo handling, and a smooth checkout flow. Built with clean architecture and REST APIs to support real production usage.",
+      "eCommerce mobile app for a supermarket chain. Full shopping experience — category browsing, product search, cart, promo handling, and checkout flow. Built with clean architecture and a Laravel backend.",
     gitUrl: "",
-    previewUrl: "",
+    playStoreUrl: "",
+    appStoreUrl: "",
   },
   {
-    id: 3,
-    imgUrl: "/images/projects/wms.jpg",
-    title: "WMS",
+    id: 10,
+    imgUrl: "/images/projects/daralrafidain.jpg",
+    title: "Dar Alrafidain — E-book Platform",
     description:
-      "A warehouse management system built with Flutter to handle product stock, item movements, and inventory operations. It supports multi-warehouse flows, stock adjustments, and integration with a backend for real-time data consistency.",
-    gitUrl: "https://github.com/Ali-Elchab/launchHub",
-    previewUrl: "",
+      "Arabic e-book platform live on App Store and Play Store. Features in-app purchases, online payments, offline reading with encrypted downloads, posts and announcements, and a rich digital library with a smooth reading experience.",
+    gitUrl: "",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.brainsolutions.daralrafidain2",
+    appStoreUrl: "https://apps.apple.com/us/app/dar-al-rafidayn-%D8%AF%D8%A7%D8%B1-%D8%A7%D9%84%D8%B1%D8%A7%D9%81%D8%AF%D9%8A%D9%86/id6479602448",
   },
   {
-    id: 5,
-    imgUrl: "/images/projects/launchhub-post.jpg",
-    title: "Launchhub",
+    id: 11,
+    imgUrl: "/images/projects/sweetdeals.jpg",
+    title: "Sweet Deals — eCommerce App",
     description:
-      "An all-in-one mobile application for startups, guiding them through hiring, marketing, legal matters, and financial management. It also connects job seekers with exciting opportunities across various startups.",
-    gitUrl: "https://github.com/Ali-Elchab/launchHub",
-    previewUrl: "",
+      "eCommerce mobile app for a sweets and chocolates shop in Lebanon. Supports bulk buying, product browsing across categories including chocolates, candies, and drinks, with a smooth checkout experience.",
+    gitUrl: "",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.brainsolutions.sweetdeals&pli=1",
+    appStoreUrl: "https://apps.apple.com/us/app/sweet-deals-lebanon/id6578441396",
   },
   {
-    id: 6,
-    imgUrl: "/images/projects/bookly.png",
-    title: "Bookly App",
+    id: 8,
+    imgUrl: "/images/projects/servio.jpg",
+    title: "Servio — Service Provider Marketplace",
     description:
-      "A Flutter application that fetches the Google Books API to display programming-related books. It showcases Bloc and Cubit for state management and applies MVVM best practices for clean and maintainable code.",
-    gitUrl: "https://github.com/Ali-Elchab/bookly_app",
+      "Multi-role marketplace connecting service providers with customers. Providers subscribe monthly to list their services across categorized directories. Features provider profiles, media uploads, deep linking, and category-based discovery — built in Flutter with a Laravel backend.",
+    gitUrl: "https://github.com/Ali-Elchab/servio",
+    playStoreUrl: "",
+    appStoreUrl: "",
   },
   {
-    id: 7,
-    imgUrl: "/images/projects/Group1.png",
-    title: "Netflix Replica",
+    id: 1,
+    imgUrl: "/images/projects/flutter-skeleton.jpg",
+    title: "Flutter Starter Skeleton",
     description:
-      "A collaborative project cloning the Netflix UI, focusing on smooth UX and responsive design. Built using React, it demonstrates the ability to replicate complex layouts and user flows found in real-world streaming platforms.",
-    gitUrl: "https://github.com/Ali-Elchab/netflix-replica",
-    previewUrl: "",
+      "A production-ready Flutter starter kit designed for scalable apps with clean architecture, Riverpod state management, Drift local persistence, and GoRouter navigation. Flexible enough for any type of app (e-commerce, SaaS, or internal tools).",
+    gitUrl: "https://github.com/Ali-Elchab/flutter_skeleton",
+    playStoreUrl: "",
+    appStoreUrl: "",
   },
- 
-  
+  {
+    id: 9,
+    imgUrl: "/images/projects/ecom-personal.jpg",
+    title: "Personal eCommerce App",
+    description:
+      "Full-featured eCommerce mobile app built independently — upgraded UI and flows from a client project. Includes auth, category browsing, product search, cart, promo handling, and checkout. Built with Flutter clean architecture and a Laravel backend.",
+    gitUrl: "https://github.com/Ali-Elchab/ecom_app",
+    playStoreUrl: "",
+    appStoreUrl: "",
+  },
 ];
 
 const ProjectSection = () => {
-  const sortedProjects = [...projectsData].sort((a, b) => a.id - b.id);
-
   return (
-    <div className="flex flex-col items-center w-full px-4 sm:px-6">
-      <h2 className="text-4xl font-bold text-white mb-12 sm:mb-16 text-center w-full">My Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-6xl">
-        {sortedProjects.map((project) => (
+    <section className="py-12 sm:py-16 w-full">
+      <h2 className="text-4xl font-bold text-white mb-8 sm:mb-12 text-center w-full">My Projects</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-6xl mx-auto items-stretch">
+        {projectsData.map((project) => (
           <ProjectCard
             key={project.id}
             title={project.title}
             description={project.description}
             imgUrl={project.imgUrl}
             gitUrl={project.gitUrl}
+            playStoreUrl={project.playStoreUrl}
+            appStoreUrl={project.appStoreUrl}
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

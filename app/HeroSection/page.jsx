@@ -48,15 +48,14 @@ const HeroSection = ({ emailRef, projectRef }) => {
             </span>
             <br />
             <TypeAnimation
-              sequence={["Software Developer", 1100, "Flutter Developer"]}
+              sequence={["Flutter Developer", 1100, "Mobile App Developer"]}
               wrapper="span"
               speed={40}
               repeat={Infinity}
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-4 md:w-full text-left leading-relaxed">
-            I'm a Software Developer who builds real, working products -- not just screens or "hello world" APIs. I prioritize
-            clean architecture, stable logic, and systems that perform reliably in real-world use.
+            Most mobile apps fall apart the moment real users touch them. Mine don&apos;t.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 w-full sm:w-auto">

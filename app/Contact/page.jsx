@@ -8,12 +8,12 @@ import Link from "next/link";
 import Image from "next/image";
 const EmailSection = () => {
   return (
-    <section className="flex flex-col p-0 md:p-3 md:my-24 my-12 gap-6">
-      <h2 className="text-4xl font-bold text-white mb-2 text-center">Get in touch</h2>
+    <section className="flex flex-col py-12 sm:py-16 gap-6">
+      <h2 className="text-4xl font-bold text-white mb-8 sm:mb-12 text-center">Get in touch</h2>
       <div className="flex flex-col md:flex-row h-full p-0 md:p-8 justify-around gap-6 md:gap-8">
         <p className="text-[#ADB7BE] text-base md:text-lg w-full md:w-1/2 leading-relaxed text-center md:text-left px-4 md:px-0">
-          Backend-minded engineer open to Java/Spring Boot and Laravel roles. I respond quickest by phone or email, but feel free
-          to connect through any of the links below.
+          Flutter Developer open to remote roles and freelance projects. Building production mobile apps with clean architecture
+          and Laravel backends. Reach out through any of the links below.
         </p>
         <div className="socials flex flex-col gap-4 w-full md:w-auto px-4 md:px-0">
           <div className="flex items-center gap-3 md:gap-2">

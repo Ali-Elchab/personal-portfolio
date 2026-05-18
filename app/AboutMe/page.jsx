@@ -9,25 +9,22 @@ const TAB_DATA = [
     title: "Skills",
     content: (
       <div className="space-y-3 text-base">
-        <p>
-          Backend-first approach: I care about clean DB schemas, predictable APIs, and reliable auth. Currently leaning into
-          Java/Spring Boot after shipping Laravel products.
-        </p>
         <ul className="list-disc pl-4 space-y-2">
           <li>
-            <strong>Backend:</strong> REST APIs, SQL/MySQL, DB design, JWT/OAuth, caching concepts, queues
+            <strong>Mobile:</strong> Flutter, Dart, Cubit/Bloc, GoRouter, Clean Architecture, Firebase, REST Integration, Push
+            Notifications (FCM)
           </li>
           <li>
-            <strong>Languages:</strong> PHP, Java, Dart, JavaScript, C#
+            <strong>Backend:</strong> Laravel, MySQL, REST APIs, JWT/OAuth, DB Design, Multi-role Auth Systems
           </li>
           <li>
-            <strong>Frameworks:</strong> Laravel, Flutter, Next.js, Spring (foundational)
+            <strong>Tools:</strong> Git, Postman, Docker, Linux, Firebase Console
           </li>
           <li>
-            <strong>Tools:</strong> Git, Firebase, Postman, Docker (basic), Linux
+            <strong>Languages:</strong> PHP, Dart, JavaScript
           </li>
           <li>
-            <strong>Languages spoken:</strong> English (fluent), Arabic (native)
+            <strong>Spoken:</strong> English (fluent), Arabic (native)
           </li>
         </ul>
       </div>
@@ -50,11 +47,26 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2 ml-2 space-y-4">
         <li className="space-y-2">
-          <strong>Full-Stack Developer — Brain Stores, Beirut (Apr 2024 – Present)</strong>
+          <strong className="break-words">Flutter Developer — Brain Solutions, Beirut (Apr 2024 – Present)</strong>
           <ul className="list-disc pl-5 space-y-1">
-            <li>Designed REST API endpoints with validation, SQL queries, and MySQL schema optimizations.</li>
-            <li>Built ecommerce flows: checkout, cart, addresses, and product filtering logic.</li>
-            <li>Integrated auth with tokens and Google Sign-In; maintained Flutter app (clean architecture, Cubit, GoRouter).</li>
+            <li>
+              Shipped 6 production Flutter apps end to end — ecommerce, warehouse management, CRM platform, e-book platform, and
+              driver workflow apps
+            </li>
+            <li>
+              Built checkout and payment flows covering cart logic, address management, delivery fee calculation, and payment
+              validation
+            </li>
+            <li>
+              Architected a warehouse management system with barcode scanning, live inventory syncing, and role-based access
+              control
+            </li>
+            <li>
+              Built a CRM platform with lead tracking, client portal, activity logging, and multi-role access
+            </li>
+            <li>
+              Designed a Flutter starter skeleton with clean architecture, Cubit, and GoRouter — cut new project setup time by 60%
+            </li>
           </ul>
         </li>
         <li className="space-y-2">
@@ -101,25 +113,25 @@ const AboutSection = () => {
     });
   };
   return (
-    <section className="text-white">
-      <div className="md:grid md:grid-cols-5  gap-8 items-center py-8  xl:gap-16 sm:py-16 my-8">
+    <section className="text-white py-12 sm:py-16">
+      <div className="md:grid md:grid-cols-5 gap-8 items-center xl:gap-16">
         <div className="hidden md:block place-self-start md:col-span-2">
           <div className="w-full flex items-center justify-end">
             <Image
-              src="/images/about-image.png"
-              className="w-full object-fill rounded-xl"
+              src="/images/alichab.png"
+              className="w-full object-cover rounded-xl"
               width={400}
               height={500}
-              alt="PC Setup"
+              alt="Ali Chab"
             />
           </div>
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full md:col-span-3">
-          <h2 className="text-4xl font-bold text-white mb-4 text-center md:text-left">About Me</h2>
-          <p className="text-base lg:text-lg text-justify leading-relaxed">
-            Software engineer focused on backend fundamentals and scalable logic. My IT roots keep me systems-minded, and my
-            current focus is moving deeper into Java and Spring Boot while still delivering Laravel and Flutter products end to
-            end.
+          <h2 className="text-4xl font-bold text-white mb-8 sm:mb-12 text-center md:text-left">About Me</h2>
+          <p className="text-base lg:text-lg text-left md:text-justify leading-relaxed">
+            Flutter developer with 2+ years shipping production apps end to end. I work with clean architecture, Cubit, and
+            Laravel backends — focused on building things that actually hold up when real users touch them. Canadian-Lebanese,
+            based in Beirut, open to remote.
           </p>
           <div className="flex flex-row mt-8 flex-wrap gap-3">
             <TabButton active={tab === "skills"} selectTab={() => handleTabChange("skills")}>
