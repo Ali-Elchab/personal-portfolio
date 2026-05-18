@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 2,
     imgUrl: "/images/projects/freshzone.jpg",
-    title: "FreshZone",
+    title: "FreshZone — eCommerce App",
     description:
       "eCommerce mobile app for a supermarket chain. Full shopping experience — category browsing, product search, cart, promo handling, and checkout flow. Built with clean architecture and a Laravel backend.",
     gitUrl: "",
@@ -77,7 +77,7 @@ const projectsData = [
   {
     id: 9,
     imgUrl: "/images/projects/ecom-personal.jpg",
-    title: "Personal eCommerce App",
+    title: "eShop — eCommerce App",
     description:
       "Full-featured eCommerce mobile app built independently — upgraded UI and flows from a client project. Includes auth, category browsing, product search, cart, promo handling, and checkout. Built with Flutter clean architecture and a Laravel backend.",
     gitUrl: "",
