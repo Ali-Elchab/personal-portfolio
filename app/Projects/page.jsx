@@ -74,16 +74,16 @@ const projectsData = [
     playStoreUrl: "",
     appStoreUrl: "",
   },
-  {
-    id: 9,
-    imgUrl: "/images/projects/ecom-personal.jpg",
-    title: "eShop — eCommerce App",
-    description:
-      "Full-featured eCommerce mobile app built independently — upgraded UI and flows from a client project. Includes auth, category browsing, product search, cart, promo handling, and checkout. Built with Flutter clean architecture and a Laravel backend.",
-    gitUrl: "",
-    playStoreUrl: "",
-    appStoreUrl: "",
-  },
+  // {
+  //   id: 9,
+  //   imgUrl: "/images/projects/ecom-personal.jpg",
+  //   title: "eShop — eCommerce App",
+  //   description:
+  //     "Full-featured eCommerce mobile app built independently — upgraded UI and flows from a client project. Includes auth, category browsing, product search, cart, promo handling, and checkout. Built with Flutter clean architecture and a Laravel backend.",
+  //   gitUrl: "",
+  //   playStoreUrl: "",
+  //   appStoreUrl: "",
+  // },
 ];
 
 const ProjectSection = () => {

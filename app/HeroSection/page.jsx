@@ -11,7 +11,7 @@ const HeroSection = ({ emailRef, projectRef }) => {
         <div className="w-full sm:hidden flex flex-col items-center gap-3 pt-2">
           <div className="w-36 h-auto shrink-0">
             <Image
-              src="/images/alichab.png"
+              src="/images/alichab.jpg"
               className="block w-full h-auto object-cover"
               alt="Ali Chab"
               width={300}
@@ -28,7 +28,7 @@ const HeroSection = ({ emailRef, projectRef }) => {
         <div className="hidden sm:flex md:order-last sm:col-span-5 w-full items-center justify-center md:justify-end lg:mt-0">
           <div className="w-48 sm:w-60 md:w-96 h-auto mx-auto md:mx-0">
             <Image
-              src="/images/alichab.png"
+              src="/images/alichab.jpg"
               className="block mx-auto w-full h-auto object-cover"
               alt="Ali Chab"
               width={300}
