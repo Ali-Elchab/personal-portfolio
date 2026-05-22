@@ -18,7 +18,7 @@ const TAB_DATA = [
             Design, Multi-role Auth Systems
           </li>
           <li>
-            <strong>Tools:</strong> Git, Postman, Docker, Linux, Firebase
+            <strong>Tools:</strong> App Store Connect, Google Play Console, Git, Postman, Docker, Linux, Firebase
             Console
           </li>
           <li>
@@ -136,10 +136,12 @@ const AboutSection = () => {
           About Me
         </h2>
         <p className="text-base lg:text-lg text-left leading-relaxed w-full">
-          Flutter developer shipping production mobile apps end to end —
-          ecommerce, CRM, warehouse management, and digital platforms. Clean
-          architecture, Cubit, Laravel backends. Canadian-Lebanese, based in
-          Beirut, open to remote.
+          Product-focused Flutter developer shipping production mobile apps end
+          to end across ecommerce, warehouse management, CRM, and e-book
+          platforms. Strong in clean architecture, Cubit/Bloc, GoRouter,
+          Firebase, Laravel backends, and App Store / Play Store release
+          workflows. Canadian citizen based in Beirut, Lebanon, available for
+          remote roles with EST overlap.
         </p>
         <div className="flex flex-row mt-8 flex-wrap gap-3">
           <TabButton

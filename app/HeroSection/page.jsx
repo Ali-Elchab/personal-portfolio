@@ -19,8 +19,8 @@ const HeroSection = ({ emailRef, projectRef }) => {
             />
           </div>
           <div className="text-xs uppercase tracking-widest text-blue-200 flex flex-col items-center gap-1 text-center">
-            <span>Beirut, Lebanon</span>
-            <span>Canadian-Lebanese</span>
+            <span>Canadian citizen based in Beirut, Lebanon</span>
+            <span>Available for remote roles with EST overlap</span>
           </div>
         </div>
 
@@ -39,8 +39,8 @@ const HeroSection = ({ emailRef, projectRef }) => {
 
         <div className="col-span-7 text-center sm:text-left flex flex-col gap-5 sm:gap-6 w-full items-center sm:items-start">
           <div className="hidden sm:flex text-sm uppercase tracking-[0.25em] text-blue-200 flex-wrap gap-3 justify-start">
-            <span>Beirut, Lebanon</span>
-            <span>Canadian-Lebanese</span>
+            <span>Canadian citizen based in Beirut, Lebanon</span>
+            <span>Available for remote roles with EST overlap</span>
           </div>
           <h1 className="text-white mb-0 sm:mb-2 text-2xl sm:text-4xl lg:text-6xl font-extrabold leading-tight w-full">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700">
@@ -55,7 +55,8 @@ const HeroSection = ({ emailRef, projectRef }) => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-4 md:w-full text-left leading-relaxed">
-            Most mobile apps fall apart the moment real users touch them. Mine don&apos;t.
+            Most mobile apps fall apart the moment real users touch them. Mine
+            don&apos;t.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 w-full sm:w-auto">
