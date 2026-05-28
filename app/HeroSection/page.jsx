@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -73,7 +74,7 @@ const HeroSection = ({ emailRef, projectRef }) => {
               Hire Me
             </button>
             <a
-              href="https://drive.google.com/file/d/1DkFL2wSY0eSUvpE6e4L0yo2pWv0_SsMX/view?usp=sharing"
+              href="https://drive.google.com/file/d/1qyc9RKMs61pVy1hbxZgMEuCRz4ZDD6hU/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 w-full sm:w-40 rounded-full sm:mr-4 bg-transparent hover:bg-slate-800 border border-white text-white text-center"
