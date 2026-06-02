@@ -41,8 +41,10 @@ const projectsData = [
     description:
       "Arabic e-book platform live on App Store and Play Store. Features in-app purchases, online payments, offline reading with encrypted downloads, posts and announcements, and a rich digital library with a smooth reading experience.",
     gitUrl: "",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.brainsolutions.daralrafidain2",
-    appStoreUrl: "https://apps.apple.com/us/app/dar-al-rafidayn-%D8%AF%D8%A7%D8%B1-%D8%A7%D9%84%D8%B1%D8%A7%D9%81%D8%AF%D9%8A%D9%86/id6479602448",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.brainsolutions.daralrafidain2",
+    appStoreUrl:
+      "https://apps.apple.com/us/app/dar-al-rafidayn-%D8%AF%D8%A7%D8%B1-%D8%A7%D9%84%D8%B1%D8%A7%D9%81%D8%AF%D9%8A%D9%86/id6479602448",
   },
   {
     id: 11,
@@ -51,8 +53,10 @@ const projectsData = [
     description:
       "eCommerce mobile app for a sweets and chocolates shop in Lebanon. Supports bulk buying, product browsing across categories including chocolates, candies, and drinks, with a smooth checkout experience.",
     gitUrl: "",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.brainsolutions.sweetdeals&pli=1",
-    appStoreUrl: "https://apps.apple.com/us/app/sweet-deals-lebanon/id6578441396",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.brainsolutions.sweetdeals&pli=1",
+    appStoreUrl:
+      "https://apps.apple.com/us/app/sweet-deals-lebanon/id6578441396",
   },
   {
     id: 8,
@@ -74,14 +78,24 @@ const projectsData = [
     playStoreUrl: "",
     appStoreUrl: "",
   },
+  {
+    id: 12,
+    imgUrl: "/images/projects/pos.jpg",
+    title: "QuickPOS — POS Desktop App",
+    description:
+      "QuickPOS is a focused POS desktop proof of concept built with Flutter Desktop and a C#/.NET backend API.",
+    gitUrl: "https://github.com/Ali-Elchab/pos_flutter_desktop",
+    playStoreUrl: "",
+    appStoreUrl: "",
+  },
   // {
-  //   id: 9,
-  //   imgUrl: "/images/projects/ecom-personal.jpg",
-  //   title: "eShop — eCommerce App",
-  //   description:
-  //     "Full-featured eCommerce mobile app built independently — upgraded UI and flows from a client project. Includes auth, category browsing, product search, cart, promo handling, and checkout. Built with Flutter clean architecture and a Laravel backend.",
-  //   gitUrl: "",
-  //   playStoreUrl: "",
+  //   id: 9  ,
+  //   imgUr  l: "/images/projects/ecom-personal.jpg",
+  //   title  : "eShop — eCommerce App",
+  //   descr  iption:
+  //     "Fu  ll-featured eCommerce mobile app built independently — upgraded UI and flows from a client project. Includes auth, category browsing, product search, cart, promo handling, and checkout. Built with Flutter clean architecture and a Laravel backend.",
+  //   gitUr  l: "",
+  //   playS},toreUrl: "",
   //   appStoreUrl: "",
   // },
 ];
@@ -89,7 +103,9 @@ const projectsData = [
 const ProjectSection = () => {
   return (
     <section className="py-12 sm:py-16 w-full">
-      <h2 className="text-4xl font-bold text-white mb-8 sm:mb-12 text-center w-full">My Projects</h2>
+      <h2 className="text-4xl font-bold text-white mb-8 sm:mb-12 text-center w-full">
+        My Projects
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-6xl mx-auto items-stretch">
         {projectsData.map((project) => (
           <ProjectCard
