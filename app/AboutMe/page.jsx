@@ -1,110 +1,181 @@
 "use client";
+import React, { useTransition, useState } from "react";
+import TabButton from "../components/TabButton";
 
-import Image from "next/image";
+const TAB_DATA = [
+  {
+    id: "skills",
+    title: "Skills",
+    content: (
+      <div className="space-y-3 text-base">
+        <ul className="list-disc pl-4 space-y-2">
+          <li>
+            <strong>Mobile:</strong> Flutter, Dart, Cubit/Bloc, GoRouter, Clean
+            Architecture, Firebase, REST Integration, Push Notifications (FCM)
+          </li>
+          <li>
+            <strong>Backend:</strong> Laravel, MySQL, REST APIs, JWT/OAuth, DB
+            Design, Multi-role Auth Systems
+          </li>
+          <li>
+            <strong>Tools:</strong> App Store Connect, Google Play Console, Git, Postman, Docker, Linux, Firebase
+            Console
+          </li>
+          <li>
+            <strong>Languages:</strong> PHP, Dart, JavaScript
+          </li>
+          <li>
+            <strong>Spoken:</strong> English (fluent), Arabic (native)
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    id: "education",
+    title: "Education",
+    content: (
+      <ul className="list-disc pl-2 ml-2 space-y-2">
+        <li>
+          <strong>Bachelor in Computer Engineering</strong> — Lebanese
+          International University, Lebanon (Oct 2018 – Jul 2021)
+        </li>
+      </ul>
+    ),
+  },
+  {
+    id: "experience",
+    title: "Experience",
+    content: (
+      <ul className="list-disc pl-2 ml-2 space-y-4">
+        <li className="space-y-2">
+          <strong className="break-words">
+            Flutter Developer — Brain Solutions, Beirut (Apr 2024 – Present)
+          </strong>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Shipped 6 production Flutter apps end to end — ecommerce,
+              warehouse management, CRM platform, e-book platform, and driver
+              workflow apps
+            </li>
+            <li>
+              Built checkout and payment flows covering cart logic, address
+              management, delivery fee calculation, and payment validation
+            </li>
+            <li>
+              Architected a warehouse management system with barcode scanning,
+              live inventory syncing, and role-based access control
+            </li>
+            <li>
+              Built a CRM platform with lead tracking, client portal, activity
+              logging, and multi-role access
+            </li>
+            <li>
+              Designed a Flutter starter skeleton with clean architecture,
+              Cubit, and GoRouter — cut new project setup time by 60%
+            </li>
+          </ul>
+        </li>
+        <li className="space-y-2">
+          <strong>
+            IT Technician — Cosmaroma Inc, Toronto (May 2022 – Aug 2023)
+          </strong>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Managed Azure AD, Office 365, servers, POS, and Windows/Linux
+              environments.
+            </li>
+          </ul>
+        </li>
+        <li className="space-y-2">
+          <strong>IT Helpdesk — Vast, Beirut (Aug 2020 – Apr 2022)</strong>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Handled 100+ Windows/Linux systems, led OS upgrades, and improved
+              operations for 200+ staff.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    ),
+  },
+  {
+    id: "certifications",
+    title: "Certifications",
+    content: (
+      <ul className="list-disc pl-2 ml-2 space-y-3">
+        <li>
+          <strong>Flutter & Dart – Complete Guide (Udemy), 2024</strong>
+        </li>
+        <li>
+          <strong>SE Factory Full-Stack Bootcamp, 2024</strong> — Laravel, JS,
+          Git, APIs; final project in Flutter
+        </li>
+        <li>
+          <strong>CS Foundations – SE Factory, 2023</strong> — Python, data
+          structures, algorithms
+        </li>
+      </ul>
+    ),
+  },
+];
 
-const HeroSection = ({ emailRef, projectRef }) => {
-  const scrollToSection = (ref) => {
-    if (!ref?.current) return;
+const AboutSection = () => {
+  const [tab, setTab] = useState("skills");
+  const [, startTransition] = useTransition();
 
-    window.scrollTo({
-      top: ref.current.offsetTop - 100,
-      behavior: "smooth",
+  const handleTabChange = (id) => {
+    startTransition(() => {
+      setTab(id);
     });
   };
-
   return (
-    <section className="min-h-0 md:min-h-screen mb-16 sm:mb-24 flex flex-col justify-start md:justify-center items-center md:items-start w-full">
-      <div className="flex flex-col sm:grid sm:grid-cols-12 sm:mt-5 mb-8 lg:mt-8 gap-8 sm:gap-6 items-center sm:justify-items-stretch w-full">
-        {/* Mobile image + location */}
-        <div className="w-full sm:hidden flex flex-col items-center gap-3 pt-2">
-          <div className="w-32 h-auto shrink-0">
-            <Image
-              src="/images/alichab.jpg"
-              className="block w-full h-auto object-cover"
-              alt="Ali Al Hadi Elchab"
-              width={300}
-              height={300}
-              priority
-            />
-          </div>
-
-          <div className="text-xs uppercase tracking-[0.16em] text-blue-200 text-center leading-relaxed">
-            Canadian citizen · Beirut, Lebanon · Remote with EST overlap
-          </div>
+    <section className="text-white py-8 sm:py-12 w-full">
+      <div className="w-full text-left flex flex-col items-start">
+        <h2 className="text-4xl font-bold text-white mb-8 sm:mb-12 text-left">
+          About Me
+        </h2>
+        <p className="text-base lg:text-lg text-left leading-relaxed w-full">
+          Product-focused Flutter developer shipping production mobile apps end
+          to end across ecommerce, warehouse management, CRM, and e-book
+          platforms. Strong in clean architecture, Cubit/Bloc, GoRouter,
+          Firebase, Laravel backends, and App Store / Play Store release
+          workflows. Canadian citizen based in Beirut, Lebanon, available for
+          remote roles with EST overlap.
+        </p>
+        <div className="flex flex-row mt-8 flex-wrap gap-3">
+          <TabButton
+            active={tab === "skills"}
+            selectTab={() => handleTabChange("skills")}
+          >
+            Skills
+          </TabButton>
+          <TabButton
+            active={tab === "experience"}
+            selectTab={() => handleTabChange("experience")}
+          >
+            Experience
+          </TabButton>
+          <TabButton
+            active={tab === "education"}
+            selectTab={() => handleTabChange("education")}
+          >
+            Education
+          </TabButton>
+          <TabButton
+            active={tab === "certifications"}
+            selectTab={() => handleTabChange("certifications")}
+          >
+            Certifications
+          </TabButton>
         </div>
-
-        {/* Desktop/tablet image */}
-        <div className="hidden sm:flex md:order-last sm:col-span-5 w-full items-center justify-center md:justify-end">
-          <div className="w-48 sm:w-60 md:w-80 lg:w-96 h-auto mx-auto md:mx-0">
-            <Image
-              src="/images/alichab.jpg"
-              className="block mx-auto w-full h-auto object-cover"
-              alt="Ali Al Hadi Elchab"
-              width={500}
-              height={500}
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Text content */}
-        <div className="col-span-7 text-center sm:text-left flex flex-col gap-5 sm:gap-6 w-full items-center sm:items-start">
-          <div className="hidden sm:flex text-sm uppercase tracking-[0.18em] text-blue-200 leading-relaxed">
-            <span>
-              Canadian citizen · Beirut, Lebanon · Remote with EST overlap
-            </span>
-          </div>
-
-          <h1 className="text-white mb-0 text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight w-full">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700">
-              Ali Al Hadi Elchab
-            </span>
-            <br />
-            Flutter Mobile Engineer
-          </h1>
-
-          <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-1 max-w-2xl text-left leading-relaxed">
-            I build production Flutter apps for business systems — from mobile
-            architecture to APIs, CI/CD, and store releases.
-          </p>
-
-          <div className="flex flex-wrap gap-3 text-sm text-blue-100 justify-center sm:justify-start">
-            <span className="rounded-full border border-blue-400/40 px-4 py-2">
-              3+ years Flutter
-            </span>
-            <span className="rounded-full border border-blue-400/40 px-4 py-2">
-              Canadian citizen · EST overlap
-            </span>
-          </div>
-
-          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 w-full sm:w-auto pt-2">
-            <button
-              onClick={() => scrollToSection(emailRef)}
-              className="px-6 py-3 w-full sm:w-40 rounded-full bg-gradient-to-br from-blue-300 via-blue-500 to-blue-500 hover:opacity-90 text-white"
-            >
-              Contact Me
-            </button>
-
-            <a
-              href="https://drive.google.com/file/d/1qyc9RKMs61pVy1hbxZgMEuCRz4ZDD6hU/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 w-full sm:w-40 rounded-full bg-transparent hover:bg-slate-800 border border-white text-white text-center"
-            >
-              View CV
-            </a>
-
-            <button
-              onClick={() => scrollToSection(projectRef)}
-              className="px-6 py-3 w-full sm:w-40 rounded-full bg-transparent hover:bg-slate-800 border border-white text-white"
-            >
-              View Projects
-            </button>
-          </div>
+        <div className="mt-8">
+          {" "}
+          {TAB_DATA.find((t) => t.id === tab).content}
         </div>
       </div>
     </section>
   );
 };
 
-export default HeroSection;
+export default AboutSection;
