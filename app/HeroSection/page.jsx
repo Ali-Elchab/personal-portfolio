@@ -48,17 +48,37 @@ const HeroSection = ({ emailRef, projectRef }) => {
               Ali Al Hadi Elchab
             </span>
             <br />
-            <TypeAnimation
-              sequence={["Flutter Developer", 1100, "Mobile App Developer"]}
+           <TypeAnimation
+              sequence={[
+                "Flutter Mobile Engineer",
+                1100,
+                "Full-Stack Mobile Developer",
+                1100,
+                "Flutter + Laravel Developer",
+                1100,
+              ]}
               wrapper="span"
               speed={40}
               repeat={Infinity}
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-4 md:w-full text-left leading-relaxed">
-            Most mobile apps fall apart the moment real users touch them. Mine
-            don&apos;t.
+            I build production Flutter apps for ecommerce, CRM, POS, and ERP systems — from clean mobile architecture to Laravel APIs, CI/CD, and App Store / Play Store releases.
           </p>
+          <div className="flex flex-wrap gap-3 text-sm text-blue-100 justify-center sm:justify-start">
+            <span className="rounded-full border border-blue-400/40 px-4 py-2">
+              3+ years Flutter
+            </span>
+            <span className="rounded-full border border-blue-400/40 px-4 py-2">
+              App Store & Play Store releases
+            </span>
+            <span className="rounded-full border border-blue-400/40 px-4 py-2">
+              Laravel API integration
+            </span>
+            <span className="rounded-full border border-blue-400/40 px-4 py-2">
+              Remote-ready, EST overlap
+            </span>
+          </div>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 w-full sm:w-auto">
             <button
@@ -71,7 +91,7 @@ const HeroSection = ({ emailRef, projectRef }) => {
               }
               className="px-6 py-3 w-full sm:w-40 rounded-full sm:mr-4 bg-gradient-to-br from-blue-300 via-blue-500 to-blue-500 hover:bg-slate-200 text-white"
             >
-              Hire Me
+              Contact Me
             </button>
             <a
               href="https://drive.google.com/file/d/1qyc9RKMs61pVy1hbxZgMEuCRz4ZDD6hU/view?usp=sharing"
@@ -79,7 +99,7 @@ const HeroSection = ({ emailRef, projectRef }) => {
               rel="noopener noreferrer"
               className="px-6 py-3 w-full sm:w-40 rounded-full sm:mr-4 bg-transparent hover:bg-slate-800 border border-white text-white text-center"
             >
-              Download CV
+              View my CV
             </a>
             <button
               onClick={() =>
