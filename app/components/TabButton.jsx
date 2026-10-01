@@ -5,7 +5,7 @@ const TabButton = ({ active, selectTab, children }) => {
     ? "mr-3 font-semibold hover:text-white text-white border-b border-blue-500"
     : "mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-blue-500";
   return (
-    <button onClick={selectTab}>
+    <button onClick={selectTab} className="py-2">
       <p className={`mr-3 font-semibold hover:text-white text-sm md:text-base ${buttonClasses}`}>{children}</p>
     </button>
   );

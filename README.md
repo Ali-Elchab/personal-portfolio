@@ -1,38 +1,32 @@
-# Welcome to My Portfolio!
+# Ali Elchab | Portfolio
 
-## Introduction
-👋 Hi there! I'm Ali, a passionate software developer and technology enthusiast dedicated to building impactful software solutions. This website is not just a showcase of my projects; it's a reflection of my journey in tech. Built with Next.js and hosted on Vercel, here you'll find a selection of my work that highlights my skills across software development and IT.
+Personal portfolio of Ali Elchab, Flutter mobile engineer. Live at https://alielchab.vercel.app
 
-Whether you're here to explore my past projects, looking for a potential collaboration, or just browsing around, I hope you find this portfolio informative and inspiring. 
-#### Hosted version  :  https://alielchab.vercel.app/
+Built with Next.js 14 (App Router), Tailwind CSS and Vercel Analytics, hosted on Vercel.
 
-## Technologies Used
-- **Next.js**: A React framework for production.
-- **Tailwind CSS**: For styling and design.
-- **Vercel**: For deployment and hosting.
+## Run locally
 
-## Screenshots
-| Hero Section                      | About Me                               | 
-| ------------------------------------ | -------------------------------------------- | 
-|![hero](https://github.com/Ali-Elchab/portfolio-website/assets/106644215/c1ef2d46-b20a-4979-8295-43b743d04d82) | ![about](https://github.com/Ali-Elchab/portfolio-website/assets/106644215/20e77a17-ab7a-4330-a7c1-002fd4d8d638) | 
+```bash
+npm install
+npm run dev
+```
 
-| Projects                             | Contact                               | 
-| -------------------------------------- | ---------------------------------------- | 
-| ![projects](https://github.com/Ali-Elchab/portfolio-website/assets/106644215/ea8117bf-3066-4787-ade1-8f55a89d9820) | ![contact](https://github.com/Ali-Elchab/portfolio-website/assets/106644215/58486750-df32-4f34-87c0-06f7e0c75971) |
+Open http://localhost:3000.
 
-## Video Demo
+## Adding or editing a project
 
-https://github.com/Ali-Elchab/portfolio-website/assets/106644215/8befac2b-ac39-455c-8552-3cd04b3fa7f9
+1. Edit `app/data/projects.js`. Every project has a `slug`, `status`, `summary`, `overview`, `highlights`, `stack` and `links`.
+2. Optional fields: `caseStudy` (`challenge`, `approach`), `metrics` (`[{ value, label }]`), `role`, `links.liveUrl`.
+3. Put images in `public/images/projects/<slug>/`:
+   - `cover.jpg` (or `.webp` / `.png`) for the card and detail header
+   - `screen-1.webp`, `screen-2.webp`, ... for the screenshot gallery
 
+Images are picked up automatically. No code change is needed.
 
+## CV
 
-## Local Development
-To run this project locally, follow these steps:
+Put the PDF at `public/Ali-Elchab-CV.pdf`. The site links to it automatically and falls back to the Google Drive copy while the file is missing.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/yourrepository.git
+## Share image
 
-
-
-
+`app/opengraph-image.png` is the preview shown when the site is shared on LinkedIn, WhatsApp and similar.

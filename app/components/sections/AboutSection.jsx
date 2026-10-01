@@ -1,6 +1,6 @@
 "use client";
 import React, { useTransition, useState } from "react";
-import TabButton from "../components/TabButton";
+import TabButton from "../TabButton";
 
 const TAB_DATA = [
   {
@@ -11,15 +11,17 @@ const TAB_DATA = [
         <ul className="list-disc pl-4 space-y-2">
           <li>
             <strong>Mobile:</strong> Flutter, Dart, Cubit/Bloc, GoRouter, Clean
-            Architecture, Firebase, REST Integration, Push Notifications (FCM)
+            Architecture, Firebase, REST Integration, Push Notifications (FCM),
+            Offline storage and sync (Drift/SQLite), Barcode and RFID scanning,
+            In-app purchases and Stripe, Flutter Web
           </li>
           <li>
-            <strong>Backend:</strong> Laravel, MySQL, REST APIs, JWT/OAuth, DB
-            Design, Multi-role Auth Systems
+            <strong>Backend:</strong> Laravel, Filament, MySQL, REST APIs, JWT/OAuth,
+            DB Design, Multi-tenant and multi-role systems
           </li>
           <li>
             <strong>Tools:</strong> App Store Connect, Google Play Console, Git, Postman, Docker, Linux, Firebase
-            Console
+            Console, GitHub Actions, Sentry
           </li>
           <li>
             <strong>Languages:</strong> PHP, Dart, JavaScript
@@ -54,9 +56,9 @@ const TAB_DATA = [
           </strong>
           <ul className="list-disc pl-5 space-y-1">
             <li>
-              Shipped 6 production Flutter apps end to end — ecommerce,
-              warehouse management, CRM platform, e-book platform, and driver
-              workflow apps
+              Shipped 7+ production Flutter apps end to end — ecommerce,
+              warehouse management (including RFID), CRM platform, e-book
+              platform, and operations apps
             </li>
             <li>
               Built checkout and payment flows covering cart logic, address
@@ -130,7 +132,7 @@ const AboutSection = () => {
     });
   };
   return (
-    <section className="text-white py-8 sm:py-12 w-full">
+    <section id="about" className="scroll-mt-24 text-white py-8 sm:py-12 w-full">
       <div className="w-full text-left flex flex-col items-start">
         <h2 className="text-4xl font-bold text-white mb-8 sm:mb-12 text-left">
           About Me

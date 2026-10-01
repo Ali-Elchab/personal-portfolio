@@ -1,19 +1,16 @@
-"use client";
-
+import fs from "fs";
+import path from "path";
 import Image from "next/image";
 
-const HeroSection = ({ emailRef, projectRef }) => {
-  const scrollToSection = (ref) => {
-    if (!ref?.current) return;
+const DRIVE_CV_URL = "https://drive.google.com/file/d/1qyc9RKMs61pVy1hbxZgMEuCRz4ZDD6hU/view?usp=sharing";
+const LOCAL_CV = "Ali-Elchab-CV.pdf";
 
-    window.scrollTo({
-      top: ref.current.offsetTop - 100,
-      behavior: "smooth",
-    });
-  };
+const HeroSection = () => {
+  const hasLocalCv = fs.existsSync(path.join(process.cwd(), "public", LOCAL_CV));
+  const cvUrl = hasLocalCv ? `/${LOCAL_CV}` : DRIVE_CV_URL;
 
   return (
-    <section className="min-h-0 md:min-h-screen mb-16 sm:mb-24 flex flex-col justify-start md:justify-center items-center md:items-start w-full">
+    <section id="top" className="min-h-0 md:min-h-screen mb-16 sm:mb-24 flex flex-col justify-start md:justify-center items-center md:items-start w-full">
       <div className="flex flex-col sm:grid sm:grid-cols-12 sm:mt-5 mb-8 lg:mt-8 gap-8 sm:gap-6 items-center sm:justify-items-stretch w-full">
         {/* Mobile image + location */}
         <div className="w-full sm:hidden flex flex-col items-center gap-3 pt-2">
@@ -64,29 +61,28 @@ const HeroSection = ({ emailRef, projectRef }) => {
           </h1>
 
           <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-1 max-w-2xl text-left leading-relaxed">
-            I build production Flutter apps for business systems — from mobile
-            architecture to APIs, CI/CD, and store releases.
+            I build Flutter apps for warehouses, POS and SaaS: offline sync, RFID scanning and multi-tenant Laravel backends, shipped to the App Store and Google Play.
           </p>
 
           <div className="flex flex-wrap gap-3 text-sm text-blue-100 justify-center sm:justify-start">
             <span className="rounded-full border border-blue-400/40 px-4 py-2">
-              3+ years Flutter
+              2.5+ years Flutter in production
             </span>
             <span className="rounded-full border border-blue-400/40 px-4 py-2">
-              Canadian citizen · EST overlap
+              Apps live on App Store & Google Play
             </span>
           </div>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 w-full sm:w-auto pt-2">
-            <button
-              onClick={() => scrollToSection(emailRef)}
-              className="px-6 py-3 w-full sm:w-40 rounded-full bg-gradient-to-br from-blue-300 via-blue-500 to-blue-500 hover:opacity-90 text-white"
+            <a
+              href="#contact"
+              className="px-6 py-3 w-full sm:w-40 rounded-full bg-gradient-to-br from-blue-300 via-blue-500 to-blue-500 hover:opacity-90 text-white text-center"
             >
               Contact Me
-            </button>
+            </a>
 
             <a
-              href="https://drive.google.com/file/d/1qyc9RKMs61pVy1hbxZgMEuCRz4ZDD6hU/view?usp=sharing"
+              href={cvUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 w-full sm:w-40 rounded-full bg-transparent hover:bg-slate-800 border border-white text-white text-center"
@@ -94,12 +90,12 @@ const HeroSection = ({ emailRef, projectRef }) => {
               View CV
             </a>
 
-            <button
-              onClick={() => scrollToSection(projectRef)}
-              className="px-6 py-3 w-full sm:w-40 rounded-full bg-transparent hover:bg-slate-800 border border-white text-white"
+            <a
+              href="#projects"
+              className="px-6 py-3 w-full sm:w-40 rounded-full bg-transparent hover:bg-slate-800 border border-white text-white text-center"
             >
               View Projects
-            </button>
+            </a>
           </div>
         </div>
       </div>
