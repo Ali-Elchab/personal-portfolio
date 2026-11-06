@@ -10,7 +10,7 @@ const ContactSection = () => {
       <h2 className="text-4xl font-bold text-white mb-8 sm:mb-12 text-center">Get in touch</h2>
       <div className="flex flex-col md:flex-row h-full p-0 md:p-8 justify-around gap-6 md:gap-8">
         <p className="text-[#ADB7BE] text-base md:text-lg w-full md:w-1/2 leading-relaxed text-center md:text-left px-4 md:px-0">
-          Open to remote Flutter roles and freelance projects. If you&apos;re hiring, or have a warehouse, POS or SaaS app in mind, email me or message me on LinkedIn.
+          Open to remote Flutter roles and freelance projects. Canadian citizen, relocating to Toronto in March 2027. If you&apos;re hiring, or have a warehouse, POS or SaaS app in mind, email me or message me on LinkedIn.
         </p>
         <div className="socials flex flex-col gap-4 w-full md:w-auto px-4 md:px-0">
           <div className="flex items-center gap-3 md:gap-2">

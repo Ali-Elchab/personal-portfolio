@@ -4,7 +4,7 @@ import { getProjectImages } from "../lib/projectImages";
 
 export const metadata = {
   title: "All Projects",
-  description: "Flutter apps, business systems and products by Ali Elchab: store releases, WMS, CRM, POS and SaaS.",
+  description: "Flutter apps, business systems and SaaS products by Ali Elchab: Appointly, DSR, the VisionRise Portal, and client apps for warehouse, CRM and ecommerce.",
 };
 
 const ProjectsPage = () => {

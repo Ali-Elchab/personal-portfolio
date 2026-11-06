@@ -10,7 +10,7 @@ const ProjectsSection = () => {
     <section id="projects" className="scroll-mt-24 py-12 sm:py-16 w-full">
       <h2 className="text-4xl font-bold text-white mb-3 text-center w-full">Selected Projects</h2>
       <p className="text-[#ADB7BE] text-center mb-8 sm:mb-12 max-w-2xl mx-auto">
-        Apps live on the App Store and Google Play, private business systems in daily use, and products I own and build myself.
+        Products I build at VisionRise, and client apps from Brain Solutions: live on the App Store and Google Play, or private business systems.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-6xl mx-auto items-stretch">
         {featured.map((project) => (

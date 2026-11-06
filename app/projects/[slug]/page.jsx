@@ -164,6 +164,12 @@ const ProjectDetail = ({ params }) => {
           </section>
         ) : null}
 
+        {status === "development" || status === "built" ? (
+          <p className="mt-12 rounded-lg border border-white/10 bg-white/5 p-4 text-sm text-[#ADB7BE]">
+            This product is not publicly released yet. I&apos;m happy to walk through it on a call.
+          </p>
+        ) : null}
+
         {status === "internal" ? (
           <p className="mt-12 rounded-lg border border-white/10 bg-white/5 p-4 text-sm text-[#ADB7BE]">
             This system is private to the company that uses it, so there are no public links or real data here. I&apos;m

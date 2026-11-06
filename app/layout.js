@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar-components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 const description =
-  "Flutter mobile engineer building production apps for business systems: warehouse management, CRM, ecommerce and SaaS, with Laravel backends and App Store / Play Store releases.";
+  "Ali Elchab is a Flutter mobile engineer and founder of VisionRise. He builds offline-first, multi-tenant business apps with Flutter and Laravel, released on the App Store and Google Play. Canadian citizen, open to remote roles.";
 
 export const metadata = {
   metadataBase: new URL("https://alielchab.vercel.app"),
@@ -16,10 +16,13 @@ export const metadata = {
   },
   description,
   icons: { icon: "/images/logo.png" },
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Ali Elchab | Flutter Mobile Engineer",
     description,
     type: "website",
+    url: "/",
+    siteName: "Ali Elchab",
   },
 };
 

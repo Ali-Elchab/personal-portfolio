@@ -18,7 +18,7 @@ const HeroSection = () => {
             <Image
               src="/images/alichab.jpg"
               className="block w-full h-auto object-cover"
-              alt="Ali Al Hadi Elchab"
+              alt="Ali Elchab"
               width={300}
               height={300}
               priority
@@ -26,7 +26,7 @@ const HeroSection = () => {
           </div>
 
           <div className="text-xs uppercase tracking-[0.16em] text-blue-200 text-center leading-relaxed">
-            Canadian citizen · Beirut, Lebanon · Remote with EST overlap
+            Canadian citizen · Relocating to Toronto, March 2027 · Open to remote, EST overlap
           </div>
         </div>
 
@@ -36,7 +36,7 @@ const HeroSection = () => {
             <Image
               src="/images/alichab.jpg"
               className="block mx-auto w-full h-auto object-cover"
-              alt="Ali Al Hadi Elchab"
+              alt="Ali Elchab"
               width={500}
               height={500}
               priority
@@ -48,13 +48,13 @@ const HeroSection = () => {
         <div className="col-span-7 text-center sm:text-left flex flex-col gap-5 sm:gap-6 w-full items-center sm:items-start">
           <div className="hidden sm:flex text-sm uppercase tracking-[0.18em] text-blue-200 leading-relaxed">
             <span>
-              Canadian citizen · Beirut, Lebanon · Remote with EST overlap
+              Canadian citizen · Relocating to Toronto, March 2027 · Open to remote, EST overlap
             </span>
           </div>
 
           <h1 className="text-white mb-0 text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight w-full">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700">
-              Ali Al Hadi Elchab
+              Ali Elchab
             </span>
             <br />
             Flutter Mobile Engineer
@@ -70,6 +70,9 @@ const HeroSection = () => {
             </span>
             <span className="rounded-full border border-blue-400/40 px-4 py-2">
               Apps live on App Store & Google Play
+            </span>
+            <span className="rounded-full border border-blue-400/40 px-4 py-2">
+              Founder, VisionRise
             </span>
           </div>
 
