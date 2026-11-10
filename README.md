@@ -25,7 +25,7 @@ Images are picked up automatically. No code change is needed.
 
 ## CV
 
-Put the PDF at `public/Ali-Elchab-CV.pdf`. The site links to it automatically and falls back to the Google Drive copy while the file is missing.
+Put the PDF at `public/Ali-Elchab-CV.pdf`. The View CV button links to it.
 
 ## Share image
 

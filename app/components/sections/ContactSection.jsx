@@ -1,38 +1,36 @@
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedInIcon from "../../../public/linkedin-icon.svg";
+import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
-import Link from "next/link";
-import Image from "next/image";
+const links = [
+  { href: "mailto:alielchab01@gmail.com", label: "Email", value: "alielchab01@gmail.com", Icon: MdOutlineEmail },
+  { href: "https://github.com/Ali-Elchab", label: "GitHub", value: "github.com/Ali-Elchab", Icon: FaGithub },
+  { href: "https://www.linkedin.com/in/ali-elchab/", label: "LinkedIn", value: "linkedin.com/in/ali-elchab", Icon: FaLinkedin },
+];
+
 const ContactSection = () => {
   return (
-    <section id="contact" className="scroll-mt-24 flex flex-col py-12 sm:py-16 gap-6">
-      <h2 className="text-4xl font-bold text-white mb-8 sm:mb-12 text-center">Get in touch</h2>
-      <div className="flex flex-col md:flex-row h-full p-0 md:p-8 justify-around gap-6 md:gap-8">
-        <p className="text-[#ADB7BE] text-base md:text-lg w-full md:w-1/2 leading-relaxed text-center md:text-left px-4 md:px-0">
-          Open to remote Flutter roles and freelance projects. Canadian citizen, relocating to Toronto in March 2027. If you&apos;re hiring, or have a warehouse, POS or SaaS app in mind, email me or message me on LinkedIn.
-        </p>
-        <div className="socials flex flex-col gap-4 w-full md:w-auto px-4 md:px-0">
-          <div className="flex items-center gap-3 md:gap-2">
-            <Link href="mailto:alielchab01@gmail.com" className="mr-2" aria-label="Email">
-              <MdOutlineEmail className="w-10 h-10 md:w-12 md:h-12" />
+    <section id="contact" className="w-full scroll-mt-20 py-5 pb-8 sm:py-12">
+      <h2 className="text-center text-lg font-bold text-white sm:text-3xl">Get in touch</h2>
+      <p className="mx-auto mt-2 max-w-xl text-center text-sm leading-relaxed text-[#ADB7BE] md:text-base">
+        Open to remote Flutter roles and freelance projects. Email me or message me on LinkedIn.
+      </p>
+      <ul className="mx-auto mt-4 grid max-w-md grid-cols-3 gap-2 sm:flex sm:max-w-none sm:flex-wrap sm:justify-center sm:gap-3">
+        {links.map(({ href, label, value, Icon }) => (
+          <li key={href} className="min-w-0">
+            <Link
+              href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel="noopener noreferrer"
+              className="flex h-full flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2.5 text-xs text-white transition hover:bg-white/10 sm:flex-row sm:gap-2 sm:rounded-full sm:px-4 sm:text-sm"
+            >
+              <Icon className="h-5 w-5 shrink-0" />
+              <span className="sm:hidden">{label}</span>
+              <span className="hidden sm:inline">{value}</span>
             </Link>
-            <p className="text-[#ADB7BE] text-base md:text-lg break-words">alielchab01@gmail.com</p>
-          </div>
-          <div className="flex items-center gap-3 md:gap-2">
-            <Link href="https://github.com/Ali-Elchab" target="_blank" rel="noopener noreferrer" className="mr-2">
-              <Image src={GithubIcon} alt="GitHub" />
-            </Link>
-            <p className="text-[#ADB7BE] text-base md:text-lg break-words">github.com/Ali-Elchab</p>
-          </div>
-          <div className="flex items-center gap-3 md:gap-2">
-            <Link href="https://www.linkedin.com/in/ali-elchab/" target="_blank" rel="noopener noreferrer">
-              <Image src={LinkedInIcon} alt="LinkedIn" />
-            </Link>
-            <p className="text-[#ADB7BE] text-base md:text-lg break-words">linkedin.com/in/ali-elchab/</p>
-          </div>
-        </div>
-      </div>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };

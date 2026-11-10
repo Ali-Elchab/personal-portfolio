@@ -1,105 +1,74 @@
-import fs from "fs";
-import path from "path";
 import Image from "next/image";
 
-const DRIVE_CV_URL = "https://drive.google.com/file/d/1qyc9RKMs61pVy1hbxZgMEuCRz4ZDD6hU/view?usp=sharing";
-const LOCAL_CV = "Ali-Elchab-CV.pdf";
+const CV_URL = "/Ali-Elchab-CV.pdf";
+
+const buttonClass =
+  "flex h-11 items-center justify-center rounded-full border border-white px-3 text-sm text-white hover:bg-slate-800 md:h-auto md:w-36 md:py-2.5";
+
+const chipClass = "rounded-full border border-blue-400/40 px-2.5 py-1";
 
 const HeroSection = () => {
-  const hasLocalCv = fs.existsSync(path.join(process.cwd(), "public", LOCAL_CV));
-  const cvUrl = hasLocalCv ? `/${LOCAL_CV}` : DRIVE_CV_URL;
-
   return (
-    <section id="top" className="min-h-0 md:min-h-screen mb-16 sm:mb-24 flex flex-col justify-start md:justify-center items-center md:items-start w-full">
-      <div className="flex flex-col sm:grid sm:grid-cols-12 sm:mt-5 mb-8 lg:mt-8 gap-8 sm:gap-6 items-center sm:justify-items-stretch w-full">
-        {/* Mobile image + location */}
-        <div className="w-full sm:hidden flex flex-col items-center gap-3 pt-2">
-          <div className="w-32 h-auto shrink-0">
+    <section id="top" className="flex w-full items-center py-6 sm:min-h-[calc(100svh-4rem)] sm:py-0">
+      <div className="grid w-full items-center gap-4 md:grid-cols-12 md:gap-6">
+        <div className="flex flex-col gap-5 md:col-span-7 md:gap-5">
+          <div className="flex items-center gap-4 md:block">
             <Image
               src="/images/alichab.jpg"
-              className="block w-full h-auto object-cover"
               alt="Ali Elchab"
-              width={300}
-              height={300}
+              width={160}
+              height={160}
               priority
+              className="h-20 w-20 shrink-0 rounded-full object-cover object-top ring-2 ring-white/10 md:hidden"
             />
+            <h1 className="text-2xl font-extrabold leading-snug text-white sm:text-4xl lg:text-5xl">
+              <span className="bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text text-transparent">Ali Elchab</span>
+              <br />
+              Flutter Mobile Engineer
+            </h1>
           </div>
 
-          <div className="text-xs uppercase tracking-[0.16em] text-blue-200 text-center leading-relaxed">
-            Canadian citizen · Relocating to Toronto, March 2027 · Open to remote, EST overlap
-          </div>
-        </div>
-
-        {/* Desktop/tablet image */}
-        <div className="hidden sm:flex md:order-last sm:col-span-5 w-full items-center justify-center md:justify-end">
-          <div className="w-48 sm:w-60 md:w-80 lg:w-96 h-auto mx-auto md:mx-0">
-            <Image
-              src="/images/alichab.jpg"
-              className="block mx-auto w-full h-auto object-cover"
-              alt="Ali Elchab"
-              width={500}
-              height={500}
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Text content */}
-        <div className="col-span-7 text-center sm:text-left flex flex-col gap-5 sm:gap-6 w-full items-center sm:items-start">
-          <div className="hidden sm:flex text-sm uppercase tracking-[0.18em] text-blue-200 leading-relaxed">
-            <span>
-              Canadian citizen · Relocating to Toronto, March 2027 · Open to remote, EST overlap
-            </span>
-          </div>
-
-          <h1 className="text-white mb-0 text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight w-full">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700">
-              Ali Elchab
-            </span>
-            <br />
-            Flutter Mobile Engineer
-          </h1>
-
-          <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-1 max-w-2xl text-left leading-relaxed">
-            I build Flutter apps for warehouses, POS and SaaS: offline sync, RFID scanning and multi-tenant Laravel backends, shipped to the App Store and Google Play.
+          <p className="text-xs uppercase tracking-[0.12em] text-blue-200">
+            Canadian citizen · Open to remote roles
           </p>
 
-          <div className="flex flex-wrap gap-3 text-sm text-blue-100 justify-center sm:justify-start">
-            <span className="rounded-full border border-blue-400/40 px-4 py-2">
-              2.5+ years Flutter in production
-            </span>
-            <span className="rounded-full border border-blue-400/40 px-4 py-2">
-              Apps live on App Store & Google Play
-            </span>
-            <span className="rounded-full border border-blue-400/40 px-4 py-2">
+          <p className="max-w-xl text-sm leading-7 text-[#ADB7BE] md:text-base md:leading-relaxed">
+            I build and ship Flutter apps for warehouses, POS and SaaS, with Laravel backends, to the App Store and
+            Google Play.
+          </p>
+
+          <div className="flex flex-wrap gap-2.5 text-xs text-blue-100">
+            <span className={chipClass}>2.5+ years Flutter</span>
+            <a href="#visionrise" className={`${chipClass} hover:bg-slate-800`}>
               Founder, VisionRise
-            </span>
+            </a>
           </div>
 
-          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 w-full sm:w-auto pt-2">
+          <div className="grid grid-cols-3 gap-3 pt-1 md:flex md:gap-3 md:pt-0">
             <a
               href="#contact"
-              className="px-6 py-3 w-full sm:w-40 rounded-full bg-gradient-to-br from-blue-300 via-blue-500 to-blue-500 hover:opacity-90 text-white text-center"
+              className="flex h-11 items-center justify-center rounded-full bg-gradient-to-br from-blue-300 via-blue-500 to-blue-500 px-3 text-sm text-white hover:opacity-90 md:h-auto md:w-36 md:py-2.5"
             >
-              Contact Me
+              Contact
             </a>
-
-            <a
-              href={cvUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 w-full sm:w-40 rounded-full bg-transparent hover:bg-slate-800 border border-white text-white text-center"
-            >
+            <a href={CV_URL} target="_blank" rel="noopener noreferrer" className={buttonClass}>
               View CV
             </a>
-
-            <a
-              href="#projects"
-              className="px-6 py-3 w-full sm:w-40 rounded-full bg-transparent hover:bg-slate-800 border border-white text-white text-center"
-            >
-              View Projects
+            <a href="#projects" className={buttonClass}>
+              Projects
             </a>
           </div>
+        </div>
+
+        <div className="hidden justify-end md:col-span-5 md:flex">
+          <Image
+            src="/images/alichab.jpg"
+            alt="Ali Elchab"
+            width={500}
+            height={500}
+            priority
+            className="h-auto w-64 object-cover lg:w-72"
+          />
         </div>
       </div>
     </section>
